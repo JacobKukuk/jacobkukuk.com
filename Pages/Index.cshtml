@@ -1,10 +1,147 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Jacob Kukuk";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<main>
+    <!-- Hero Section -->
+    <section class="mb-20 md:mb-32 text-center fade-in fade-in-delay-1">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter leading-tight md:leading-tight mb-6">
+            Full-Stack Developer, Systems Engineer, and Digital Polymath.
+        </h1>
+        <p class="text-lg text-slate-600 max-w-3xl mx-auto mb-8">
+            I blend code, infrastructure, and creativity to build resilient systems and user-friendly tools across courtrooms, campuses, and the cloud.
+        </p>
+        <a href="#experience" class="inline-block bg-orange-500 text-white font-medium py-3 px-8 rounded-lg hover:bg-orange-600 transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-1">
+            View My Work
+        </a>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="mb-20 md:mb-32">
+        <h2 class="text-2xl font-bold mb-8 fade-in fade-in-delay-2">Experience</h2>
+        <div class="space-y-8">
+            <!-- Job 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 fade-in fade-in-delay-3">
+                <div class="flex justify-between items-baseline flex-wrap">
+                    <h3 class="font-semibold text-lg text-slate-900">Database and SharePoint Administrator</h3>
+                    <div class="text-sm text-slate-500 mt-1 sm:mt-0">Jan 2024 - Present</div>
+                </div>
+                <div class="text-md text-slate-600">Nevada Supreme Court</div>
+                <ul class="list-disc list-outside mt-2 ml-4 space-y-1 text-slate-600">
+                    <li>Architected and deployed a custom C# application to integrate network drives with SharePoint Online, enhancing cloud-based file access and security.</li>
+                    <li>Administer statewide Citrix platforms and Office 365 environments (SharePoint, Exchange, Teams) to ensure high availability for all Nevada courts.</li>
+                    <li>Manage and secure Windows Server and Microsoft SQL Server infrastructure, overseeing data management, retention policies, and accessibility.</li>
+                </ul>
+            </div>
+            <!-- Job 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 fade-in fade-in-delay-4">
+                <div class="flex justify-between items-baseline flex-wrap">
+                    <h3 class="font-semibold text-lg text-slate-900">System Administrator</h3>
+                    <div class="text-sm text-slate-500 mt-1 sm:mt-0">Dec 2021 - Nov 2023</div>
+                </div>
+                <div class="text-md text-slate-600">College Loan Corporation</div>
+                <ul class="list-disc list-outside mt-2 ml-4 space-y-1 text-slate-600">
+                    <li>Developed and deployed a custom C# and MSSQL visitor kiosk that automated notifications via Active Directory, improving front-desk efficiency.</li>
+                    <li>Engineered custom dashboards to visualize ticket system data and project statuses on digital signs, increasing team-wide operational awareness.</li>
+                    <li>Administered a 50-user 3CX phone system with Twilio SIP Trunking, customizing the platform to meet operational needs and reduce costs.</li>
+                </ul>
+            </div>
+            <!-- Job 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 fade-in fade-in-delay-5">
+                <div class="flex justify-between items-baseline flex-wrap">
+                    <h3 class="font-semibold text-lg text-slate-900">Senior Windows System Administrator</h3>
+                    <div class="text-sm text-slate-500 mt-1 sm:mt-0">Sep 2018 - May 2019</div>
+                </div>
+                <div class="text-md text-slate-600">Whidbey Telecom</div>
+                <ul class="list-disc list-outside mt-2 ml-4 space-y-1 text-slate-600">
+                    <li>Managed and automated a complex corporate IT environment, including Active Directory, Exchange, IIS, and SharePoint Farms, using advanced PowerShell scripting.</li>
+                    <li>Administered a VMWare ESXi virtualized environment and upgraded VDI infrastructure to utilize Nvidia VGPUs, enhancing desktop performance.</li>
+                    <li>Served as the escalation point for the helpdesk, providing mentorship and resolving complex issues across server, network, and database systems.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center mt-12 fade-in fade-in-delay-6">
+            <a href="https://www.linkedin.com/in/jacobkukuk/" target="_blank" rel="noopener noreferrer" class="inline-block text-orange-500 font-medium py-3 px-8 rounded-lg border border-orange-500 hover:bg-orange-500 hover:text-white transition-colors shadow-sm hover:shadow-md transform hover:-translate-y-1">
+                View More on LinkedIn
+            </a>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="mb-20 md:mb-32">
+        <h2 class="text-2xl font-bold mb-8 fade-in">Top Skills</h2>
+        <div class="flex flex-wrap gap-3 fade-in fade-in-delay-2">
+            <span class="bg-orange-100 text-orange-800 text-sm font-medium px-4 py-2 rounded-full">C#</span>
+            <span class="bg-orange-100 text-orange-800 text-sm font-medium px-4 py-2 rounded-full">Microsoft SQL Server</span>
+            <span class="bg-orange-100 text-orange-800 text-sm font-medium px-4 py-2 rounded-full">SharePoint</span>
+            <span class="bg-orange-100 text-orange-800 text-sm font-medium px-4 py-2 rounded-full">System Administration</span>
+            <span class="bg-orange-100 text-orange-800 text-sm font-medium px-4 py-2 rounded-full">Azure DevOps</span>
+            <span class="bg-orange-100 text-orange-800 text-sm font-medium px-4 py-2 rounded-full">PowerShell</span>
+            <span class="bg-orange-100 text-orange-800 text-sm font-medium px-4 py-2 rounded-full">VMWare</span>
+            <span class="bg-orange-100 text-orange-800 text-sm font-medium px-4 py-2 rounded-full">IT Consulting</span>
+            <span class="bg-orange-100 text-orange-800 text-sm font-medium px-4 py-2 rounded-full">Telecommunications</span>
+        </div>
+    </section>
+
+    <!-- Community & Volunteering Section -->
+    <section id="community" class="mb-20 md:mb-32">
+        <h2 class="text-2xl font-bold mb-8 fade-in">Community & Volunteering</h2>
+        <div class="space-y-8">
+            <!-- Volunteer Role 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 fade-in fade-in-delay-2">
+                <h3 class="font-semibold text-lg text-slate-900">Founder & Director</h3>
+                <div class="text-md text-slate-600 mb-2">Vegas Open Network (VONet)</div>
+                <p class="text-slate-600">
+                    VONet is a nonprofit initiative building a fair, accessible, and community-owned internet across Las Vegas. Inspired by the NYC Mesh model, our mission is to connect those left offline by offering a network with no monthly fees or contracts, funded entirely by donations. We promote digital equity and local resilience by building and maintaining a shared public resource.
+                </p>
+                <a href="https://vonet.org" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 text-orange-500 font-medium hover:underline">Learn more at VONet.org</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="mb-20 md:mb-32">
+        <div class="fade-in">
+            <h2 class="text-2xl font-bold mb-8 text-center">About Me</h2>
+            <div class="grid md:grid-cols-3 gap-8 items-center">
+                <div class="md:col-span-1">
+                    <img src="https://media.licdn.com/dms/image/v2/D5603AQFFNz3UtA9BNg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1701161386590?e=1758758400&v=beta&t=Mn1I7TCjKGSHRO8rqqGwyX6gqCDi3Rd-1i8vmSyyCwY" alt="Portrait of Jacob Kukuk, a full-stack developer and systems engineer in Las Vegas." class="rounded-lg shadow-md w-full max-w-xs mx-auto">
+                </div>
+                <div class="md:col-span-2 space-y-4 text-slate-600">
+                    <p>
+                        I’m a Las Vegas-based IT professional with over 15 years of experience wearing a lot of technical hats. From full-stack development to systems administration to engineering resilient IT infrastructures, I’ve done it, built it, or fixed it.
+                    </p>
+                    <p>
+                        What sets me apart? I’m largely <strong class="text-slate-800">self-taught</strong>. I didn’t follow a traditional tech path; I built my skills through hands-on experimentation, deep dives into documentation, and plenty of late-night "ah-ha!" moments. That curiosity still drives me today.
+                    </p>
+                    <p>
+                        My toolbox includes <strong class="text-slate-800">C#, PowerShell, SQL, SharePoint, VMWare, Azure, AWS</strong>, and a whole lot more. I thrive on crafting solutions that not only work but scale, evolve, and make life easier for users and IT teams alike.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendations Section -->
+    <section id="recommendations" class="mb-20 md:mb-32">
+        <div class="max-w-3xl mx-auto text-center fade-in">
+            <h2 class="text-2xl font-bold mb-8">Recommendation</h2>
+            <div class="bg-white p-8 rounded-lg shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                <blockquote class="text-slate-600 italic">
+                    "I highly recommend Jacob for his exceptional skills and expertise in IT. His ability to troubleshoot and resolve complex technical issues is truly commendable. Jacob's dedication to staying updated with the latest industry trends and his collaborative approach make him an invaluable team member."
+                </blockquote>
+                <cite class="block text-right mt-4 not-italic text-slate-800 font-semibold">
+                    Andrew Montoya
+                    <span class="block text-sm text-slate-500 font-normal">Guiding Effective Business Growth through Long-Term Partnerships</span>
+                </cite>
+            </div>
+            <div class="text-center mt-8 fade-in">
+                <a href="https://www.linkedin.com/in/jacobkukuk/details/recommendations/" target="_blank" rel="noopener noreferrer" class="inline-block text-orange-500 font-medium py-3 px-8 rounded-lg border border-orange-500 hover:bg-orange-500 hover:text-white transition-colors shadow-sm hover:shadow-md transform hover:-translate-y-1">
+                    Recommend Me on LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
