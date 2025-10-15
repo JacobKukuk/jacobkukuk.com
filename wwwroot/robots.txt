@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://jacobkukuk.com/sitemap.xml
+
+# Disallow certain file types that don't need to be indexed
+Disallow: /*.css$
+Disallow: /*.js$
+Disallow: /lib/
+Disallow: /.well-known/
+
+# Allow important static files
+Allow: /favicon.ico
+Allow: /apple-touch-icon.png
+Allow: /jacobkukukcityscape.png
+
+# Crawl delay (optional - be respectful to server resources)
+Crawl-delay: 1
