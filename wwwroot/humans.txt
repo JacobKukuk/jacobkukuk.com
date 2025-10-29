@@ -1,0 +1,34 @@
+/* TEAM */
+Developer: Jacob Kukuk
+Site: https://jacobkukuk.com
+Email: me@jacobkukuk.com
+Location: Las Vegas, Nevada, USA
+LinkedIn: https://www.linkedin.com/in/jacobkukuk/
+GitHub: https://github.com/JacobKukuk
+
+/* SITE */
+Last update: 2025/01/25
+Language: English
+Standards: HTML5, CSS3, JavaScript ES6+
+Components: ASP.NET Core 9, Razor Pages, Tailwind CSS
+IDE: Visual Studio 2022, Visual Studio Code
+Version Control: Git
+
+/* THANKS */
+Built with: .NET 9, Tailwind CSS
+Inspired by: Modern web design principles and user-centric development
+Analytics: Umami Analytics (privacy-focused)
+Hosting: Microsoft Azure
+
+/* EXPERTISE */
+Full-Stack Development: C#, .NET, JavaScript, HTML/CSS
+Systems Engineering: Windows Server, Active Directory, VMware
+Cloud Platforms: Microsoft Azure, Amazon AWS, Office 365
+Database Administration: SQL Server, MySQL, Redis
+Network Engineering: BGP, OSPF, Mesh Networks
+DevOps: CI/CD, PowerShell automation, Infrastructure as Code
+
+/* COMMUNITY */
+Vegas Open Network (VONet): https://vonet.org
+Leading community internet initiative in Las Vegas
+Building fair, accessible networking infrastructure

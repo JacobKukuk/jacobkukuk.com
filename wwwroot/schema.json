@@ -1,0 +1,205 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://jacobkukuk.com/#person",
+      "name": "Jacob Kukuk",
+      "givenName": "Jacob",
+      "familyName": "Kukuk",
+      "url": "https://jacobkukuk.com/",
+      "email": "me@jacobkukuk.com",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://jacobkukuk.com/jacobkukukcityscape.png",
+        "width": 800,
+        "height": 800,
+        "caption": "Jacob Kukuk - Full-Stack Developer and Systems Engineer"
+      },
+      "jobTitle": [
+        "Full-Stack Developer",
+        "Systems Engineer",
+        "Database Administrator",
+        "SharePoint Administrator"
+      ],
+      "description": "Experienced Full-Stack Developer and Systems Engineer with over 15 years of expertise in enterprise applications, cloud infrastructure, and community networking initiatives based in Las Vegas, Nevada.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Las Vegas",
+        "addressRegion": "NV",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/jacobkukuk/",
+        "https://github.com/JacobKukuk",
+        "https://vonet.org"
+      ],
+      "knowsAbout": [
+        "Full-Stack Development",
+        "C# Programming",
+        ".NET Framework",
+        ".NET Core",
+        "ASP.NET",
+        "Razor Pages",
+        "Microsoft SQL Server",
+        "T-SQL",
+        "Database Design",
+        "SharePoint Administration",
+        "SharePoint Online",
+        "Microsoft Azure",
+        "Amazon Web Services",
+        "AWS",
+        "VMware vSphere",
+        "VMware ESXi",
+        "Virtualization",
+        "Network Administration",
+        "BGP Routing",
+        "OSPF Protocols",
+        "PowerShell Automation",
+        "Bash Scripting",
+        "Cloud Integration",
+        "System Administration",
+        "Windows Server",
+        "Active Directory",
+        "DevOps",
+        "CI/CD",
+        "Telecommunications",
+        "VoIP Systems",
+        "3CX",
+        "SIP Trunking",
+        "Docker",
+        "Git",
+        "Visual Studio",
+        "Office 365",
+        "Exchange Online",
+        "Microsoft Teams",
+        "Citrix XenApp",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Tailwind CSS",
+        "Bootstrap",
+        "Linux",
+        "Ubuntu",
+        "Debian",
+        "CentOS",
+        "MySQL",
+        "Redis",
+        "Mesh Networks",
+        "TCP/IP",
+        "DNS",
+        "DHCP",
+        "VPN"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Self-Taught",
+        "description": "Self-directed learning through hands-on experimentation, documentation, and continuous professional development"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Nevada Supreme Court",
+        "description": "Database and SharePoint Administrator",
+        "url": "https://nvcourts.gov/"
+      },
+      "founder": {
+        "@type": "Organization",
+        "@id": "https://vonet.org/#organization",
+        "name": "Vegas Open Network",
+        "alternateName": "VONet",
+        "url": "https://vonet.org",
+        "description": "Community-owned internet initiative providing fair and accessible networking across Las Vegas"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://jacobkukuk.com/#website",
+      "url": "https://jacobkukuk.com/",
+      "name": "Jacob Kukuk - Professional Portfolio",
+      "description": "Professional portfolio of Jacob Kukuk, Full-Stack Developer and Systems Engineer based in Las Vegas, Nevada. Showcasing 15+ years of expertise in enterprise applications, cloud infrastructure, and community technology initiatives.",
+      "publisher": {
+        "@id": "https://jacobkukuk.com/#person"
+      },
+      "inLanguage": "en-US",
+      "copyrightYear": 2025,
+      "copyrightHolder": {
+        "@id": "https://jacobkukuk.com/#person"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://jacobkukuk.com/#webpage",
+      "url": "https://jacobkukuk.com/",
+      "name": "Jacob Kukuk | Full-Stack Developer & Systems Engineer",
+      "description": "Las Vegas-based Full-Stack Developer and Systems Engineer with 15+ years of experience in C#, .NET, Azure, AWS, SQL Server, SharePoint, and enterprise applications.",
+      "isPartOf": {
+        "@id": "https://jacobkukuk.com/#website"
+      },
+      "about": {
+        "@id": "https://jacobkukuk.com/#person"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://jacobkukuk.com/jacobkukukcityscape.png"
+      },
+      "datePublished": "2024-01-01",
+      "dateModified": "2025-01-25",
+      "breadcrumb": {
+        "@id": "https://jacobkukuk.com/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://jacobkukuk.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://jacobkukuk.com/"
+        }
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://jacobkukuk.com/#service",
+      "name": "Jacob Kukuk Development Services",
+      "description": "Professional full-stack development, systems engineering, cloud architecture, and database administration services",
+      "provider": {
+        "@id": "https://jacobkukuk.com/#person"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Nevada"
+      },
+      "serviceType": [
+        "Full-Stack Development",
+        "Systems Engineering",
+        "Database Administration",
+        "Cloud Architecture",
+        "SharePoint Administration",
+        "Network Engineering",
+        "DevOps Consulting"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://vonet.org/#organization",
+      "name": "Vegas Open Network",
+      "alternateName": "VONet",
+      "url": "https://vonet.org",
+      "description": "Nonprofit community initiative building fair, accessible, and community-owned internet infrastructure across Las Vegas using mesh networking and BGP routing technologies.",
+      "founder": {
+        "@id": "https://jacobkukuk.com/#person"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Las Vegas",
+        "containedIn": {
+          "@type": "State",
+          "name": "Nevada"
+        }
+      }
+    }
+  ]
+}

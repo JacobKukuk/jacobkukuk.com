@@ -10,15 +10,19 @@
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     
+    <!-- Humans.txt -->
+    <link type="text/plain" rel="author" href="/humans.txt">
+    
     <!-- DNS Prefetch for faster loading -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link rel="dns-prefetch" href="//cloud.umami.is">
-    <link rel="dns-prefetch" href="//media.licdn.com">
+    <link rel="dns-prefetch" href="//cdn.tailwindcss.com">
 
     <!-- Preconnect for critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
 
     <!-- Enhanced SEO Meta Tags -->
     <meta name="description" content="Jacob Kukuk is a Las Vegas-based Full-Stack Developer and Systems Engineer with over 15 years of experience in C#, .NET, SQL Server, Azure, AWS, VMware, and SharePoint. Specializing in enterprise applications, cloud integration, and community networking initiatives.">
@@ -26,6 +30,7 @@
     <meta name="author" content="Jacob Kukuk">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow">
+    <meta name="google" content="notranslate">
     
     <!-- Geographic and Contact Information -->
     <meta name="geo.region" content="US-NV">
@@ -45,6 +50,7 @@
     
     <!-- Alternate URLs for different languages (if you plan to add them) -->
     <link rel="alternate" hreflang="en" href="https://jacobkukuk.com/">
+    <link rel="alternate" hreflang="x-default" href="https://jacobkukuk.com/">
     
     <!-- Favicon and Icons -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -52,16 +58,19 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#ed6f1f">
+    <meta name="msapplication-TileColor" content="#0f172a">
 
     <!-- Enhanced Open Graph Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Jacob Kukuk - Professional Portfolio">
     <meta property="og:title" content="Jacob Kukuk | Full-Stack Developer & Systems Engineer in Las Vegas">
     <meta property="og:description" content="Experienced technology professional with 15+ years building enterprise applications, managing cloud infrastructure, and leading community networking initiatives in Las Vegas, Nevada.">
-    <meta property="og:image" content="https://media.licdn.com/dms/image/v2/D5603AQFFNz3UtA9BNg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1701161386590?e=1758758400&v=beta&t=Mn1I7TCjKGSHRO8rqqGwyX6gqCDi3Rd-1i8vmSyyCwY">
+    <meta property="og:image" content="https://jacobkukuk.com/jacobkukukcityscape.png">
     <meta property="og:image:alt" content="Jacob Kukuk - Full-Stack Developer and Systems Engineer">
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="800">
+    <meta property="og:image:type" content="image/png">
     <meta property="og:url" content="https://jacobkukuk.com/">
     <meta property="og:locale" content="en_US">
 
@@ -71,7 +80,7 @@
     <meta name="twitter:creator" content="@@JacobKukuk">
     <meta name="twitter:title" content="Jacob Kukuk - Full-Stack Developer | Systems Engineer | Digital Polymath">
     <meta name="twitter:description" content="Las Vegas-based technology professional specializing in enterprise applications, cloud infrastructure, and community networking. 15+ years experience with C#, .NET, Azure, AWS, and VMware.">
-    <meta name="twitter:image" content="https://media.licdn.com/dms/image/v2/D5603AQFFNz3UtA9BNg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1701161386590?e=1758758400&v=beta&t=Mn1I7TCjKGSHRO8rqqGwyX6gqCDi3Rd-1i8vmSyyCwY">
+    <meta name="twitter:image" content="https://jacobkukuk.com/jacobkukukcityscape.png">
     <meta name="twitter:image:alt" content="Jacob Kukuk - Technology Professional Portrait">
 
     <!-- LinkedIn Article/Profile Tags -->
@@ -96,7 +105,7 @@
         ],
         "image": @Html.Raw("{")
             "@Html.Raw("@")type": "ImageObject",
-            "url": "https://media.licdn.com/dms/image/v2/D5603AQFFNz3UtA9BNg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1701161386590?e=1758758400&v=beta&t=Mn1I7TCjKGSHRO8rqqGwyX6gqCDi3Rd-1i8vmSyyCwY",
+            "url": "https://jacobkukuk.com/jacobkukukcityscape.png",
             "width": 800,
             "height": 800
         @Html.Raw("}"),
@@ -163,16 +172,21 @@
             "name": "Jacob Kukuk"
         @Html.Raw("}"),
         "inLanguage": "en-US",
-        "copyrightYear": "2024",
+        "copyrightYear": "2025",
         "copyrightHolder": @Html.Raw("{")
             "@Html.Raw("@")type": "Person",
             "name": "Jacob Kukuk"
+        @Html.Raw("}"),
+        "potentialAction": @Html.Raw("{")
+            "@Html.Raw("@")type": "SearchAction",
+            "target": @Html.Raw("{")
+                "@Html.Raw("@")type": "EntryPoint",
+                "urlTemplate": "https://jacobkukuk.com/#{search_term_string}"
+            @Html.Raw("}"),
+            "query-input": "required name=search_term_string"
         @Html.Raw("}")
     @Html.Raw("}")
     </script>
-
-    <!-- Analytics - Umami -->
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="908a8a9d-5953-47bc-b888-f278297c6060"></script>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -262,6 +276,8 @@
         .fade-in-delay-4 { animation-delay: 0.8s; }
         .fade-in-delay-5 { animation-delay: 1.0s; }
         .fade-in-delay-6 { animation-delay: 1.2s; }
+        .fade-in-delay-7 { animation-delay: 1.4s; }
+        .fade-in-delay-8 { animation-delay: 1.6s; }
         
         /* Glass morphism effect */
         .glass {
