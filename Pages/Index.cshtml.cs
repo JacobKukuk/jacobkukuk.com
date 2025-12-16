@@ -12,8 +12,8 @@ namespace jacobkukuk.com.Pages
             _logger = logger;
         }
 
-        public string PageTitle { get; set; } = "Jacob Kukuk - Full-Stack Developer & Systems Engineer | Las Vegas, NV";
-        public string MetaDescription { get; set; } = "Jacob Kukuk is a Las Vegas-based Full-Stack Developer and Systems Engineer with 15+ years of experience. Expert in C#, .NET, Azure, AWS, SQL Server, SharePoint, and enterprise system architecture.";
+        public string PageTitle { get; set; } = "KUKUK_OS v1.0 | Digital Polymath & Systems Engineer";
+        public string MetaDescription { get; set; } = "Jacob Kukuk - Digital Polymath. Las Vegas-based Full-Stack Developer and Systems Engineer with 15+ years of experience in C#, .NET, Azure, AWS, SQL Server, and building resilient infrastructure.";
         public string CanonicalUrl { get; set; } = "https://jacobkukuk.com/";
         public string OgImage { get; set; } = "https://jacobkukuk.com/jacobkukukcityscape.png";
         public string CurrentYear { get; set; } = DateTime.Now.Year.ToString();
@@ -30,7 +30,7 @@ namespace jacobkukuk.com.Pages
             ViewData["LastModified"] = LastModified;
 
             // Log page view for analytics
-            _logger.LogInformation("Homepage accessed at {Time}", DateTime.UtcNow);
+            _logger.LogInformation("KUKUK_OS initialized at {Time}", DateTime.UtcNow);
         }
     }
 }

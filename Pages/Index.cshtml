@@ -1,598 +1,459 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Jacob Kukuk - Full-Stack Developer & Systems Engineer";
-    ViewData["Description"] = "Las Vegas-based Full-Stack Developer and Systems Engineer with 15+ years of experience in C#, .NET, Azure, AWS, SQL Server, SharePoint, and enterprise applications. Currently Database & SharePoint Administrator at Nevada Supreme Court.";
+    ViewData["Title"] = "Full-Stack Developer & Systems Engineer";
+    ViewData["Description"] = "Jacob Kukuk is a Las Vegas-based Full-Stack Developer and Systems Engineer with 15+ years experience in C#, .NET, Azure, AWS, SQL Server, and enterprise applications. Currently Database & SharePoint Administrator at Nevada Supreme Court.";
+    ViewData["OgTitle"] = "Jacob Kukuk | Full-Stack Developer & Systems Engineer | Las Vegas";
+    ViewData["OgDescription"] = "Digital Polymath with 15+ years building enterprise applications, cloud infrastructure, and community networks. Expert in C#, .NET, Azure, AWS, and SQL Server.";
+    ViewData["TwitterTitle"] = "Jacob Kukuk - Full-Stack Developer & Systems Engineer";
+    ViewData["TwitterDescription"] = "Las Vegas-based technology professional. 15+ years experience in enterprise development, systems engineering, and community networking.";
 }
 
-<!-- Breadcrumb Schema -->
-<script type="application/ld+json">
-{
-    "@@context": "https://schema.org",
-    "@@type": "BreadcrumbList",
-    "itemListElement": [
-        {
-            "@@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://jacobkukuk.com/"
-        }
-    ]
-}
-</script>
+@section Head {
+    <!-- Page-specific FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@@context": "https://schema.org",
+        "@@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@@type": "Question",
+                "name": "What services does Jacob Kukuk offer?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "Jacob Kukuk offers full-stack development, systems engineering, database administration, SharePoint administration, cloud integration (Azure/AWS), and network infrastructure services."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "Where is Jacob Kukuk located?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "Jacob Kukuk is based in Las Vegas, Nevada, and provides services both locally and remotely worldwide."
+                }
+            },
+            {
+                "@@type": "Question",
+                "name": "What technologies does Jacob Kukuk specialize in?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "Jacob specializes in C#, .NET, ASP.NET, SQL Server, SharePoint, Microsoft Azure, AWS, VMware, PowerShell, Active Directory, and network protocols like BGP and OSPF."
+                }
+            },
+            {
+                "@@type": "Question", 
+                "name": "What is Vegas Open Network (VONet)?",
+                "acceptedAnswer": {
+                    "@@type": "Answer",
+                    "text": "Vegas Open Network (VONet) is a community-owned internet initiative founded by Jacob Kukuk, providing fair and accessible networking infrastructure to underserved communities in Las Vegas using mesh networking and BGP routing."
+                }
+            }
+        ]
+    }
+    </script>
 
-<!-- Hero Section -->
-<section id="home" class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto text-center">
-        <div class="fade-in">
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                <span class="block">Full-Stack Developer</span>
-                <span class="block gradient-text">Systems Engineer</span>
-                <span class="block text-3xl md:text-4xl lg:text-5xl font-normal text-gray-300 mt-2">Digital Polymath</span>
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
-                I blend <span class="text-primary-400 font-semibold">code</span>, 
-                <span class="text-primary-400 font-semibold">infrastructure</span>, and 
-                <span class="text-primary-400 font-semibold">creativity</span> to build resilient systems and 
-                user-friendly tools across courtrooms, campuses, and the cloud.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="#portfolio" class="inline-flex items-center px-8 py-4 bg-primary-600 text-white font-semibold rounded-full hover:bg-primary-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg animate-glow" aria-label="View Jacob Kukuk's portfolio and projects">
-                    <span>View My Work</span>
-                    <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                </a>
-                <a href="#contact" class="inline-flex items-center px-8 py-4 border-2 border-primary-500 text-primary-400 font-semibold rounded-full hover:bg-primary-500 hover:text-white transition-all duration-300 transform hover:scale-105" aria-label="Contact Jacob Kukuk">
-                    Let's Connect
-                </a>
-            </div>
+    <!-- ItemList Schema for Projects -->
+    <script type="application/ld+json">
+    {
+        "@@context": "https://schema.org",
+        "@@type": "ItemList",
+        "itemListElement": [
+            {
+                "@@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@@type": "SoftwareApplication",
+                    "name": "Vegas Open Network (VONet)",
+                    "description": "Community-owned internet initiative providing fair and accessible networking to underserved Las Vegas communities using mesh networking and BGP routing.",
+                    "url": "https://vonet.org",
+                    "applicationCategory": "NetworkApplication",
+                    "operatingSystem": "Linux"
+                }
+            },
+            {
+                "@@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@@type": "SoftwareApplication",
+                    "name": "SharePoint-Network Drive Integration",
+                    "description": "Custom C# application integrating traditional network drives with SharePoint Online for the Nevada Supreme Court.",
+                    "applicationCategory": "BusinessApplication",
+                    "operatingSystem": "Windows"
+                }
+            },
+            {
+                "@@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@@type": "SoftwareApplication",
+                    "name": "Visitor Kiosk System",
+                    "description": "Enterprise visitor management system with Active Directory integration and automated notifications.",
+                    "applicationCategory": "BusinessApplication",
+                    "operatingSystem": "Windows"
+                }
+            }
+        ]
+    }
+    </script>
+}
+
+<!-- Hero Section: "Press Start" -->
+<section id="home" class="min-h-[80vh] flex flex-col items-center justify-center text-center mb-20 relative" aria-labelledby="hero-title">
+    <!-- Decorative Grid behind -->
+    <div class="absolute inset-0 border-x-2 border-retro-cyan/20 pointer-events-none mx-10 md:mx-32" aria-hidden="true"></div>
+    <div class="absolute inset-0 border-y-2 border-retro-neon/20 pointer-events-none my-10 md:my-32" aria-hidden="true"></div>
+
+    <div class="bg-black/80 p-8 md:p-12 border-4 border-white shadow-[8px_8px_0px_#00f3ff] max-w-4xl relative">
+        <div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-retro-neon text-black font-retro text-xs px-4 py-1 uppercase border-2 border-white" aria-hidden="true">
+            Player 1 Selected
         </div>
-        
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <a href="#about" class="text-gray-400 hover:text-primary-500 transition-colors" aria-label="Scroll to about section">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
+
+        <h1 id="hero-title" class="font-retro text-4xl md:text-6xl text-white mb-6 leading-relaxed">
+            JACOB<br><span class="text-retro-neon text-glow-pink">KUKUK</span>
+        </h1>
+
+        <p class="font-terminal text-3xl md:text-4xl text-retro-cyan mb-8" role="doc-subtitle">
+            &lt; Full-Stack Developer &amp; Systems Engineer /&gt;
+        </p>
+
+        <p class="font-terminal text-xl md:text-2xl text-retro-green mb-10 max-w-2xl mx-auto leading-relaxed">
+            <span aria-hidden="true">// INITIALIZING SYSTEMS...</span><br>
+            <strong>15+ years</strong> building enterprise applications, cloud infrastructure, and community networks in <strong>Las Vegas, Nevada</strong>.
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center gap-6 font-retro text-sm">
+            <a href="#projects" class="bg-retro-cyan text-black px-6 py-4 border-b-4 border-r-4 border-retro-bg hover:translate-x-[2px] hover:translate-y-[2px] hover:border-0 hover:bg-white transition-all">
+                View Projects
+            </a>
+            <a href="https://github.com/JacobKukuk" target="_blank" rel="noopener noreferrer" class="bg-transparent text-retro-cyan border-4 border-retro-cyan px-6 py-4 hover:bg-retro-cyan hover:text-black transition-colors">
+                <i class="fa-brands fa-github mr-2" aria-hidden="true"></i>GitHub
             </a>
         </div>
+    </div>
+    
+    <div class="mt-12 animate-bounce font-retro text-xs text-white" aria-hidden="true">
+        SCROLL TO CONTINUE <span class="animate-blink">|</span>
     </div>
 </section>
 
 <!-- About Section -->
-<section id="about" class="py-20 px-4 sm:px-6 lg:px-8" itemscope itemtype="https://schema.org/AboutPage">
-    <div class="max-w-7xl mx-auto">
-        <header class="text-center mb-16 animate-on-scroll">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">About Jacob Kukuk</h2>
-            <p class="text-xl text-gray-300 max-w-3xl mx-auto" itemprop="description">
-                15+ years of turning complex problems into elegant solutions
-            </p>
-        </header>
-        
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <!-- Image -->
-            <div class="animate-on-scroll fade-in-delay-1">
-                <div class="relative">
-                    <div class="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-800 rounded-2xl transform rotate-6" aria-hidden="true"></div>
-                    <img src="~/jacobkukukcityscape.png" 
-                         alt="Jacob Kukuk, Full-Stack Developer and Systems Engineer, professional portrait with Las Vegas cityscape background" 
-                         class="relative rounded-2xl shadow-2xl w-full max-w-md mx-auto"
-                         width="800"
-                         height="800"
-                         itemprop="image"
-                         loading="eager"
-                         fetchpriority="high">
-                </div>
-            </div>
-            
-            <!-- Content -->
-            <div class="space-y-6 animate-on-scroll fade-in-delay-2">
-                <article class="glass p-6 rounded-2xl" itemscope itemtype="https://schema.org/Article">
-                    <h3 class="text-2xl font-semibold mb-4 text-primary-400" itemprop="headline">Self-Taught Excellence</h3>
-                    <p class="text-gray-300 leading-relaxed" itemprop="articleBody">
-                        I didn't follow a traditional tech path. I built my skills through hands-on experimentation, 
-                        deep dives into documentation, and plenty of late-night "ah-ha!" moments. That curiosity 
-                        and passion for learning still drives me today.
-                    </p>
-                </article>
-                
-                <article class="glass p-6 rounded-2xl" itemscope itemtype="https://schema.org/Article">
-                    <h3 class="text-2xl font-semibold mb-4 text-primary-400" itemprop="headline">Versatile Problem Solver</h3>
-                    <p class="text-gray-300 leading-relaxed" itemprop="articleBody">
-                        From full-stack development to systems administration to engineering resilient IT 
-                        infrastructures, I've done it, built it, or fixed it. I thrive on crafting solutions 
-                        that not only work but scale, evolve, and make life easier.
-                    </p>
-                </article>
-                
-                <article class="glass p-6 rounded-2xl" itemscope itemtype="https://schema.org/Article">
-                    <h3 class="text-2xl font-semibold mb-4 text-primary-400" itemprop="headline">Community Impact</h3>
-                    <p class="text-gray-300 leading-relaxed" itemprop="articleBody">
-                        Beyond corporate work, I'm passionate about using technology to strengthen communities. 
-                        I lead initiatives like <a href="https://vonet.org" class="text-primary-400 hover:text-primary-300 underline" target="_blank" rel="noopener noreferrer" itemprop="url">Vegas Open Network</a>, building fair and accessible internet 
-                        infrastructure for underserved areas.
-                    </p>
-                </article>
-            </div>
-        </div>
-    </div>
-</section>
+<section id="about" class="mb-32 pt-20 scroll-mt-20" aria-labelledby="about-title" itemscope itemtype="https://schema.org/Person">
+    <meta itemprop="name" content="Jacob Kukuk">
+    <meta itemprop="jobTitle" content="Full-Stack Developer and Systems Engineer">
+    <meta itemprop="url" content="https://jacobkukuk.com/">
+    
+    <header class="flex items-center gap-4 mb-8">
+        <i class="fa-solid fa-gamepad text-retro-neon text-4xl" aria-hidden="true"></i>
+        <h2 id="about-title" class="font-retro text-2xl md:text-3xl text-white text-glow-pink">ABOUT ME</h2>
+    </header>
 
-<!-- Experience Section -->
-<section id="experience" class="py-20 px-4 sm:px-6 lg:px-8 bg-dark-800/50" itemscope itemtype="https://schema.org/ItemList">
-    <div class="max-w-7xl mx-auto">
-        <header class="text-center mb-16 animate-on-scroll">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text" itemprop="name">Professional Experience</h2>
-            <p class="text-xl text-gray-300" itemprop="description">Building the future, one system at a time</p>
-        </header>
-        
-        <div class="space-y-8">
-            <!-- Experience Item 1 -->
-            <article class="glass p-8 rounded-2xl animate-on-scroll fade-in-delay-1 transform hover:scale-105 transition-all duration-300" 
-                     itemscope itemprop="itemListElement" itemtype="https://schema.org/WorkExperience">
-                <meta itemprop="position" content="1" />
-                <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-4">
-                    <div>
-                        <h3 class="text-2xl font-bold text-white mb-2" itemprop="name">Database and SharePoint Administrator</h3>
-                        <p class="text-primary-400 text-lg font-medium" itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
-                            <span itemprop="name">Nevada Supreme Court</span>
-                        </p>
-                    </div>
-                    <time class="inline-block bg-primary-600 text-white px-4 py-2 rounded-full text-sm font-medium mt-2 lg:mt-0" 
-                          datetime="2024-01" itemprop="startDate">
-                        Jan 2024 - Present
-                    </time>
-                </div>
-                <div itemprop="description">
-                    <ul class="space-y-2 text-gray-300">
-                        <li class="flex items-start">
-                            <span class="text-primary-500 mr-2" aria-hidden="true">▶</span>
-                            Architected and deployed a custom C# application to integrate network drives with SharePoint Online, enhancing cloud-based file access and security for Nevada's judicial system.
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-primary-500 mr-2" aria-hidden="true">▶</span>
-                            Administer statewide Citrix platforms and Office 365 environments (SharePoint, Exchange, Teams) ensuring uptime for all Nevada courts.
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-primary-500 mr-2" aria-hidden="true">▶</span>
-                            Manage and secure Windows Server and Microsoft SQL Server infrastructure, overseeing data management, retention policies, and accessibility compliance.
-                        </li>
-                    </ul>
-                </div>
-                <meta itemprop="skills" content="C#, .NET, SharePoint Online, SQL Server, Citrix, Office 365, Azure" />
-            </article>
-
-            <!-- Experience Item 2 -->
-            <article class="glass p-8 rounded-2xl animate-on-scroll fade-in-delay-2 transform hover:scale-105 transition-all duration-300"
-                     itemscope itemprop="itemListElement" itemtype="https://schema.org/WorkExperience">
-                <meta itemprop="position" content="2" />
-                <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-4">
-                    <div>
-                        <h3 class="text-2xl font-bold text-white mb-2" itemprop="name">System Administrator</h3>
-                        <p class="text-primary-400 text-lg font-medium" itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
-                            <span itemprop="name">College Loan Corporation</span>
-                        </p>
-                    </div>
-                    <time class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full text-sm font-medium mt-2 lg:mt-0" 
-                          datetime="2021-12" itemprop="startDate">
-                        <span itemprop="endDate" content="2023-11">Dec 2021 - Nov 2023</span>
-                    </time>
-                </div>
-                <div itemprop="description">
-                    <ul class="space-y-2 text-gray-300">
-                        <li class="flex items-start">
-                            <span class="text-primary-500 mr-2" aria-hidden="true">▶</span>
-                            Developed and deployed a custom C# and SQL Server visitor kiosk system with Active Directory integration, reducing front-desk processing time.
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-primary-500 mr-2" aria-hidden="true">▶</span>
-                            Engineered real-time data visualization dashboards for ticket systems and project management, displayed on digital signage to increase operational awareness.
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-primary-500 mr-2" aria-hidden="true">▶</span>
-                            Administered a 50-user 3CX phone system with Twilio SIP Trunking, reducing telecommunications costs.
-                        </li>
-                    </ul>
-                </div>
-                <meta itemprop="skills" content="C#, SQL Server, Active Directory, 3CX, Twilio, Data Visualization" />
-            </article>
-
-            <!-- Experience Item 3 -->
-            <article class="glass p-8 rounded-2xl animate-on-scroll fade-in-delay-3 transform hover:scale-105 transition-all duration-300"
-                     itemscope itemprop="itemListElement" itemtype="https://schema.org/WorkExperience">
-                <meta itemprop="position" content="3" />
-                <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-4">
-                    <div>
-                        <h3 class="text-2xl font-bold text-white mb-2" itemprop="name">Senior Windows System Administrator</h3>
-                        <p class="text-primary-400 text-lg font-medium" itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
-                            <span itemprop="name">Whidbey Telecom</span>
-                        </p>
-                    </div>
-                    <time class="inline-block bg-gray-600 text-white px-4 py-2 rounded-full text-sm font-medium mt-2 lg:mt-0" 
-                          datetime="2018-09" itemprop="startDate">
-                        <span itemprop="endDate" content="2019-05">Sep 2018 - May 2019</span>
-                    </time>
-                </div>
-                <div itemprop="description">
-                    <ul class="space-y-2 text-gray-300">
-                        <li class="flex items-start">
-                            <span class="text-primary-500 mr-2" aria-hidden="true">▶</span>
-                            Managed complex enterprise IT infrastructure including Active Directory, Exchange Server, IIS, and SharePoint Farms using advanced PowerShell automation.
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-primary-500 mr-2" aria-hidden="true">▶</span>
-                            Administered VMware ESXi virtualized environment and upgraded VDI infrastructure with Nvidia vGPU technology, improving desktop performance.
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-primary-500 mr-2" aria-hidden="true">▶</span>
-                            Served as escalation point for technical support, mentoring junior staff and resolving complex server, network, and database issues.
-                        </li>
-                    </ul>
-                </div>
-                <meta itemprop="skills" content="Active Directory, Exchange Server, VMware ESXi, PowerShell, SharePoint, IIS" />
-            </article>
+    <div class="retro-box p-8 md:p-12 bg-retro-term text-retro-green font-terminal text-2xl leading-relaxed">
+        <div class="mb-6">
+            <p><span class="text-retro-neon" aria-hidden="true">&gt;</span> <strong>TITLE:</strong> <span itemprop="description">Digital Polymath - Full-Stack Developer & Systems Engineer</span></p>
+            <p><span class="text-retro-neon" aria-hidden="true">&gt;</span> <strong>EXPERIENCE:</strong> 15+ Years</p>
+            <p><span class="text-retro-neon" aria-hidden="true">&gt;</span> <strong>LOCATION:</strong> <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Las Vegas</span>, <span itemprop="addressRegion">Nevada</span></span></p>
         </div>
-        
-        <div class="text-center mt-12 animate-on-scroll fade-in-delay-4">
-            <a href="https://www.linkedin.com/in/jacobkukuk/" target="_blank" rel="noopener noreferrer" 
-               class="inline-flex items-center px-8 py-4 border-2 border-primary-500 text-primary-400 font-semibold rounded-full hover:bg-primary-500 hover:text-white transition-all duration-300 transform hover:scale-105"
-               aria-label="View Jacob Kukuk's complete professional experience on LinkedIn">
-                View Full Experience on LinkedIn
-                <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
-            </a>
-        </div>
+        <p class="mb-6 text-white">
+            I don't follow a linear path—I traverse the entire stack. From architecting custom <strong>C# integrations</strong> for the 
+            <a href="https://nvcourts.gov/" target="_blank" rel="noopener noreferrer" class="text-retro-cyan hover:underline" itemprop="worksFor" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Nevada Supreme Court</span></a> 
+            to physically building <strong>internet infrastructure</strong> for underserved communities with 
+            <a href="https://vonet.org" target="_blank" rel="noopener noreferrer" class="text-retro-cyan hover:underline">Vegas Open Network</a>.
+        </p>
+        <blockquote class="text-retro-yellow italic border-l-4 border-retro-yellow pl-4">
+            "Specialization is for NPCs. A true Systems Engineer plays every role."
+        </blockquote>
     </div>
 </section>
 
 <!-- Skills Section -->
-<section id="skills" class="py-20 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto">
-        <header class="text-center mb-16 animate-on-scroll">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">Technical Arsenal</h2>
-            <p class="text-xl text-gray-300">A comprehensive toolkit for building the future</p>
-        </header>
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Programming & Development -->
-            <article class="glass p-8 rounded-2xl animate-on-scroll fade-in-delay-1 hover:bg-white/20 transition-all duration-300" 
-                     itemscope itemtype="https://schema.org/ItemList">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-700 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0l-11 6v12.131l11 5.869 11-5.869v-12.131l-11-6zm-6.91 6.646l7.905 4.218-7.905 4.218-7.905-4.218 7.905-4.218 7.905 4.218zm6.91 14.354v-8.695l8-4.277v8.695l-8 4.277z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-white" itemprop="name">Programming & Development</h3>
-                    <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">C#</span>
-                        <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">.NET</span>
-                        <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">Razor Pages</span>
-                        <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">JavaScript</span>
-                        <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">HTML/CSS</span>
-                        <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">PowerShell</span>
-                        <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">Bash</span>
-                    </div>
-                </div>
-            </article>
-            
-            <!-- Cloud Platforms -->
-            <article class="glass p-8 rounded-2xl animate-on-scroll fade-in-delay-2 hover:bg-white/20 transition-all duration-300"
-                     itemscope itemtype="https://schema.org/ItemList">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-white" itemprop="name">Cloud Platforms</h3>
-                    <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">Microsoft Azure</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">Amazon AWS</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">Office 365</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">SharePoint Online</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">Exchange Online</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">Teams</span>
-                    </div>
-                </div>
-            </article>
+<section id="skills" class="mb-32 scroll-mt-20" aria-labelledby="skills-title">
+    <header class="flex items-center gap-4 mb-8">
+        <i class="fa-solid fa-microchip text-retro-cyan text-4xl" aria-hidden="true"></i>
+        <h2 id="skills-title" class="font-retro text-2xl md:text-3xl text-white text-glow-cyan">TECHNICAL SKILLS</h2>
+    </header>
 
-            <!-- Virtualization & Infrastructure -->
-            <article class="glass p-8 rounded-2xl animate-on-scroll fade-in-delay-3 hover:bg-white/20 transition-all duration-300"
-                     itemscope itemtype="https://schema.org/ItemList">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-700 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M4.5 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM14.25 8.625a3.375 3.375 0 116.75 0 3.375 3.375 0 01-6.75 0zM1.5 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM17.25 19.128l-.001.144a2.25 2.25 0 01-.233.96 10.088 10.088 0 005.06-1.01.75.75 0 00.42-.643 4.875 4.875 0 00-6.957-4.611 8.586 8.586 0 011.71 5.157v.003z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-white" itemprop="name">Virtualization & Infrastructure</h3>
-                    <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">VMware vSphere</span>
-                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">VMware ESXi</span>
-                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">OpenStack</span>
-                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">Docker</span>
-                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">Hyper-V</span>
-                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">Citrix XenApp</span>
-                    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Development Skills -->
+        <article class="bg-black border-2 border-retro-purple p-6" aria-labelledby="dev-skills-title">
+            <h3 id="dev-skills-title" class="font-retro text-retro-purple text-lg mb-6 border-b-2 border-retro-purple pb-2">DEVELOPMENT</h3>
+            <dl class="space-y-4 font-terminal text-xl text-white">
+                <div>
+                    <dt class="flex justify-between mb-1"><span>C# / .NET / ASP.NET</span><span aria-label="95 percent proficiency">95%</span></dt>
+                    <dd class="h-4 bg-gray-800 border border-gray-600" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"><div class="h-full bg-retro-purple w-[95%] shadow-[0_0_10px_#b026ff]"></div></dd>
                 </div>
-            </article>
-            
-            <!-- Operating Systems -->
-            <article class="glass p-8 rounded-2xl animate-on-scroll fade-in-delay-4 hover:bg-white/20 transition-all duration-300"
-                     itemscope itemtype="https://schema.org/ItemList">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-700 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-white" itemprop="name">Operating Systems</h3>
-                    <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">Windows Server</span>
-                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">Ubuntu</span>
-                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">Debian</span>
-                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">CentOS</span>
-                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">Active Directory</span>
-                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">Group Policy</span>
-                    </div>
+                <div>
+                    <dt class="flex justify-between mb-1"><span>JavaScript / TypeScript</span><span aria-label="90 percent proficiency">90%</span></dt>
+                    <dd class="h-4 bg-gray-800 border border-gray-600" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><div class="h-full bg-retro-purple w-[90%] shadow-[0_0_10px_#b026ff]"></div></dd>
                 </div>
-            </article>
+                <div>
+                    <dt class="flex justify-between mb-1"><span>SQL Server / T-SQL</span><span aria-label="88 percent proficiency">88%</span></dt>
+                    <dd class="h-4 bg-gray-800 border border-gray-600" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"><div class="h-full bg-retro-purple w-[88%] shadow-[0_0_10px_#b026ff]"></div></dd>
+                </div>
+                <div>
+                    <dt class="flex justify-between mb-1"><span>PowerShell / Bash</span><span aria-label="92 percent proficiency">92%</span></dt>
+                    <dd class="h-4 bg-gray-800 border border-gray-600" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"><div class="h-full bg-retro-purple w-[92%] shadow-[0_0_10px_#b026ff]"></div></dd>
+                </div>
+                <div>
+                    <dt class="flex justify-between mb-1"><span>Python</span><span aria-label="80 percent proficiency">80%</span></dt>
+                    <dd class="h-4 bg-gray-800 border border-gray-600" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><div class="h-full bg-retro-purple w-[80%] shadow-[0_0_10px_#b026ff]"></div></dd>
+                </div>
+            </dl>
+        </article>
 
-            <!-- Database Systems -->
-            <article class="glass p-8 rounded-2xl animate-on-scroll fade-in-delay-5 hover:bg-white/20 transition-all duration-300"
-                     itemscope itemtype="https://schema.org/ItemList">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-700 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 1c-1.1 0-2.2.1-3.3.3-2.2.4-4.1 1.2-5.4 2.3C2 4.8 1 6.4 1 8v8c0 1.6 1 3.2 2.3 4.4 1.3 1.1 3.2 1.9 5.4 2.3 1.1.2 2.2.3 3.3.3s2.2-.1 3.3-.3c2.2-.4 4.1-1.2 5.4-2.3C22 19.2 23 17.6 23 16V8c0-1.6-1-3.2-2.3-4.4-1.3-1.1-3.2-1.9-5.4-2.3C14.2 1.1 13.1 1 12 1zm0 2c2.8 0 5.1.6 6.5 1.5S21 6.4 21 8s-.6 2.1-2.5 3S14.8 12 12 12s-5.1-.6-6.5-1.5S3 8.6 3 8s.6-2.1 2.5-3S9.2 3 12 3zm0 7c2.8 0 5.1.6 6.5 1.5S21 13.4 21 15s-.6 2.1-2.5 3S14.8 19 12 19s-5.1-.6-6.5-1.5S3 15.6 3 15s.6-2.1 2.5-3S9.2 10 12 10z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-white" itemprop="name">Database Systems</h3>
-                    <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">MS SQL Server</span>
-                        <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">MySQL</span>
-                        <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">SQLite</span>
-                        <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">Redis</span>
-                        <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">T-SQL</span>
-                        <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">Database Design</span>
-                    </div>
+        <!-- Systems & Infrastructure Skills -->
+        <article class="bg-black border-2 border-retro-green p-6" aria-labelledby="ops-skills-title">
+            <h3 id="ops-skills-title" class="font-retro text-retro-green text-lg mb-6 border-b-2 border-retro-green pb-2">SYSTEMS & INFRASTRUCTURE</h3>
+            <dl class="space-y-4 font-terminal text-xl text-white">
+                <div>
+                    <dt class="flex justify-between mb-1"><span>Azure / AWS / Cloud</span><span aria-label="90 percent proficiency">90%</span></dt>
+                    <dd class="h-4 bg-gray-800 border border-gray-600" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><div class="h-full bg-retro-green w-[90%] shadow-[0_0_10px_#39ff14]"></div></dd>
                 </div>
-            </article>
-            
-            <!-- Networking & Protocols -->
-            <article class="glass p-8 rounded-2xl animate-on-scroll fade-in-delay-6 hover:bg-white/20 transition-all duration-300"
-                     itemscope itemtype="https://schema.org/ItemList">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-pink-700 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-white" itemprop="name">Networking & Protocols</h3>
-                    <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">BGP</span>
-                        <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">OSPF</span>
-                        <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">TCP/IP</span>
-                        <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">DNS</span>
-                        <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">DHCP</span>
-                        <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">VPN</span>
-                        <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">Mesh Networks</span>
-                    </div>
+                <div>
+                    <dt class="flex justify-between mb-1"><span>Windows Server / AD</span><span aria-label="95 percent proficiency">95%</span></dt>
+                    <dd class="h-4 bg-gray-800 border border-gray-600" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"><div class="h-full bg-retro-green w-[95%] shadow-[0_0_10px_#39ff14]"></div></dd>
                 </div>
-            </article>
-
-            <!-- Telecommunications & VoIP -->
-            <article class="glass p-8 rounded-2xl animate-on-scroll fade-in-delay-7 hover:bg-white/20 transition-all duration-300"
-                     itemscope itemtype="https://schema.org/ItemList">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-cyan-700 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-white" itemprop="name">Telecommunications & VoIP</h3>
-                    <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">3CX Phone Systems</span>
-                        <span class="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">SIP Trunking</span>
-                        <span class="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">Twilio</span>
-                        <span class="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">PBX Systems</span>
-                        <span class="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">Unified Communications</span>
-                    </div>
+                <div>
+                    <dt class="flex justify-between mb-1"><span>Linux (Ubuntu/Debian)</span><span aria-label="92 percent proficiency">92%</span></dt>
+                    <dd class="h-4 bg-gray-800 border border-gray-600" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"><div class="h-full bg-retro-green w-[92%] shadow-[0_0_10px_#39ff14]"></div></dd>
                 </div>
-            </article>
-
-            <!-- Development Tools & Frameworks -->
-            <article class="glass p-8 rounded-2xl animate-on-scroll fade-in-delay-8 hover:bg-white/20 transition-all duration-300"
-                     itemscope itemtype="https://schema.org/ItemList">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-yellow-700 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-white" itemprop="name">Development Tools & Frameworks</h3>
-                    <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">Git</span>
-                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">Visual Studio</span>
-                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">VS Code</span>
-                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">Bootstrap</span>
-                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">Tailwind CSS</span>
-                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="itemListElement">CI/CD</span>
-                    </div>
+                <div>
+                    <dt class="flex justify-between mb-1"><span>VMware / Virtualization</span><span aria-label="88 percent proficiency">88%</span></dt>
+                    <dd class="h-4 bg-gray-800 border border-gray-600" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"><div class="h-full bg-retro-green w-[88%] shadow-[0_0_10px_#39ff14]"></div></dd>
                 </div>
-            </article>
-        </div>
+                <div>
+                    <dt class="flex justify-between mb-1"><span>Networking (BGP/OSPF)</span><span aria-label="85 percent proficiency">85%</span></dt>
+                    <dd class="h-4 bg-gray-800 border border-gray-600" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><div class="h-full bg-retro-green w-[85%] shadow-[0_0_10px_#39ff14]"></div></dd>
+                </div>
+            </dl>
+        </article>
     </div>
 </section>
 
-<!-- Portfolio/Projects Section -->
-<section id="portfolio" class="py-20 px-4 sm:px-6 lg:px-8 bg-dark-800/50" itemscope itemtype="https://schema.org/CollectionPage">
-    <div class="max-w-7xl mx-auto">
-        <header class="text-center mb-16 animate-on-scroll">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text" itemprop="name">Featured Projects</h2>
-            <p class="text-xl text-gray-300" itemprop="description">Real solutions for real challenges</p>
-        </header>
+<!-- Projects Section -->
+<section id="projects" class="mb-32 scroll-mt-20" aria-labelledby="projects-title">
+    <header class="flex items-center gap-4 mb-8">
+        <i class="fa-solid fa-floppy-disk text-retro-yellow text-4xl" aria-hidden="true"></i>
+        <h2 id="projects-title" class="font-retro text-2xl md:text-3xl text-white text-glow-cyan">FEATURED PROJECTS</h2>
+    </header>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         
-        <div class="grid lg:grid-cols-2 gap-8">
-            <!-- Project 1 -->
-            <article class="glass p-8 rounded-2xl animate-on-scroll fade-in-delay-1 transform hover:scale-105 transition-all duration-300"
-                     itemscope itemtype="https://schema.org/CreativeWork">
-                <div class="mb-6">
-                    <h3 class="text-2xl font-bold text-white mb-3" itemprop="name">Vegas Open Network (VONet)</h3>
-                    <p class="text-gray-300 leading-relaxed mb-4" itemprop="description">
-                        Leading a nonprofit initiative to build fair, accessible, and community-owned internet across Las Vegas. 
-                        Inspired by NYC Mesh, we're connecting underserved communities with no monthly fees or contracts using BGP routing and mesh network technologies.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="keywords">Community Leadership</span>
-                        <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="keywords">Network Infrastructure</span>
-                        <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="keywords">Digital Equity</span>
-                    </div>
-                    <a href="https://vonet.org" target="_blank" rel="noopener noreferrer" 
-                       class="inline-flex items-center text-primary-400 hover:text-primary-300 font-medium"
-                       aria-label="Visit Vegas Open Network website"
-                       itemprop="url">
-                        Visit VONet.org
-                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                    </a>
+        <!-- Project 1: VONet -->
+        <article class="group bg-black border-4 border-gray-700 hover:border-retro-yellow transition-all duration-100 hover:-translate-y-2" itemscope itemtype="https://schema.org/SoftwareApplication">
+            <div class="bg-gray-800 h-32 flex items-center justify-center border-b-4 border-gray-700 group-hover:bg-retro-yellow group-hover:border-retro-yellow transition-colors">
+                <i class="fa-solid fa-tower-broadcast text-6xl text-gray-600 group-hover:text-black" aria-hidden="true"></i>
+            </div>
+            <div class="p-6">
+                <h3 class="font-retro text-white text-sm mb-2 group-hover:text-retro-yellow" itemprop="name">Vegas Open Network</h3>
+                <p class="font-terminal text-xl text-gray-400 mb-4 line-clamp-3" itemprop="description">
+                    Community-owned internet initiative providing fair, accessible networking to underserved Las Vegas communities using mesh networking and BGP routing.
+                </p>
+                <div class="flex gap-2 mb-4 flex-wrap" aria-label="Technologies used">
+                    <span class="bg-retro-bg text-retro-cyan px-2 font-retro text-[10px] border border-retro-cyan">BGP</span>
+                    <span class="bg-retro-bg text-retro-cyan px-2 font-retro text-[10px] border border-retro-cyan">MESH</span>
+                    <span class="bg-retro-bg text-retro-cyan px-2 font-retro text-[10px] border border-retro-cyan">NONPROFIT</span>
                 </div>
-            </article>
-            
-            <!-- Project 2 -->
-            <article class="glass p-8 rounded-2xl animate-on-scroll fade-in-delay-2 transform hover:scale-105 transition-all duration-300"
-                     itemscope itemtype="https://schema.org/SoftwareApplication">
-                <div class="mb-6">
-                    <h3 class="text-2xl font-bold text-white mb-3" itemprop="name">SharePoint-Network Drive Integration</h3>
-                    <p class="text-gray-300 leading-relaxed mb-4" itemprop="description">
-                        Custom C# application integrating traditional network drives with SharePoint Online for the Nevada 
-                        Supreme Court, enhancing cloud-based file access while maintaining security and compliance for the judicial system.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="applicationCategory">C# Development</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text.sm font-medium" itemprop="applicationCategory">SharePoint API</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="applicationCategory">Cloud Integration</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="applicationCategory">Security</span>
-                    </div>
-                    <meta itemprop="operatingSystem" content="Windows" />
-                    <meta itemprop="programmingLanguage" content="C#" />
+                <a href="https://vonet.org" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-gray-700 text-white font-retro text-xs py-3 hover:bg-retro-yellow hover:text-black transition-colors" itemprop="url">
+                    VISIT VONET.ORG
+                </a>
+                <meta itemprop="applicationCategory" content="NetworkApplication">
+            </div>
+        </article>
+
+        <!-- Project 2: SharePoint Integration -->
+        <article class="group bg-black border-4 border-gray-700 hover:border-retro-neon transition-all duration-100 hover:-translate-y-2" itemscope itemtype="https://schema.org/SoftwareApplication">
+            <div class="bg-gray-800 h-32 flex items-center justify-center border-b-4 border-gray-700 group-hover:bg-retro-neon group-hover:border-retro-neon transition-colors">
+                <i class="fa-solid fa-cloud text-6xl text-gray-600 group-hover:text-black" aria-hidden="true"></i>
+            </div>
+            <div class="p-6">
+                <h3 class="font-retro text-white text-sm mb-2 group-hover:text-retro-neon" itemprop="name">SharePoint Cloud Integration</h3>
+                <p class="font-terminal text-xl text-gray-400 mb-4 line-clamp-3" itemprop="description">
+                    Custom C# application integrating network drives with SharePoint Online for Nevada Supreme Court's judicial system.
+                </p>
+                <div class="flex gap-2 mb-4 flex-wrap" aria-label="Technologies used">
+                    <span class="bg-retro-bg text-retro-neon px-2 font-retro text-[10px] border border-retro-neon">C#</span>
+                    <span class="bg-retro-bg text-retro-neon px-2 font-retro text-[10px] border border-retro-neon">SHAREPOINT</span>
+                    <span class="bg-retro-bg text-retro-neon px-2 font-retro text-[10px] border border-retro-neon">AZURE</span>
                 </div>
-            </article>
-            
-            <!-- Project 3 -->
-            <article class="glass p-8 rounded-2xl animate-on-scroll fade-in-delay-3 transform hover:scale-105 transition-all duration-300"
-                     itemscope itemtype="https://schema.org/SoftwareApplication">
-                <div class="mb-6">
-                    <h3 class="text-2xl font-bold text-white mb-3" itemprop="name">Automated Visitor Kiosk System</h3>
-                    <p class="text-gray-300 leading-relaxed mb-4" itemprop="description">
-                        Developed a comprehensive visitor management system using C# and SQL Server that integrates with 
-                        Active Directory for automated notifications and enhanced front-desk security operations.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="applicationCategory">Full-Stack Development</span>
-                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text.sm font-medium" itemprop="applicationCategory">SQL Server</span>
-                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text.sm font-medium" itemprop="applicationCategory">Active Directory</span>
-                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text.sm font-medium" itemprop="applicationCategory">Automation</span>
-                    </div>
-                    <meta itemprop="programmingLanguage" content="C#" />
-                    <meta itemprop="applicationCategory" content="SecurityApplication" />
+                <span class="block w-full text-center bg-gray-700 text-gray-500 font-retro text-xs py-3 cursor-not-allowed" aria-label="Project is confidential">
+                    CONFIDENTIAL
+                </span>
+                <meta itemprop="applicationCategory" content="BusinessApplication">
+            </div>
+        </article>
+
+        <!-- Project 3: Visitor Kiosk -->
+        <article class="group bg-black border-4 border-gray-700 hover:border-retro-green transition-all duration-100 hover:-translate-y-2" itemscope itemtype="https://schema.org/SoftwareApplication">
+            <div class="bg-gray-800 h-32 flex items-center justify-center border-b-4 border-gray-700 group-hover:bg-retro-green group-hover:border-retro-green transition-colors">
+                <i class="fa-solid fa-id-card text-6xl text-gray-600 group-hover:text-black" aria-hidden="true"></i>
+            </div>
+            <div class="p-6">
+                <h3 class="font-retro text-white text-sm mb-2 group-hover:text-retro-green" itemprop="name">Visitor Management Kiosk</h3>
+                <p class="font-terminal text-xl text-gray-400 mb-4 line-clamp-3" itemprop="description">
+                    Enterprise visitor management system with Active Directory integration, touch UI, and automated notifications.
+                </p>
+                <div class="flex gap-2 mb-4 flex-wrap" aria-label="Technologies used">
+                    <span class="bg-retro-bg text-retro-green px-2 font-retro text-[10px] border border-retro-green">C#</span>
+                    <span class="bg-retro-bg text-retro-green px-2 font-retro text-[10px] border border-retro-green">SQL</span>
+                    <span class="bg-retro-bg text-retro-green px-2 font-retro text-[10px] border border-retro-green">AD</span>
                 </div>
-            </article>
-            
-            <!-- Project 4 -->
-            <article class="glass p-8 rounded-2xl animate-on-scroll fade-in-delay-4 transform hover:scale-105 transition-all duration-300"
-                     itemscope itemtype="https://schema.org/SoftwareApplication">
-                <div class="mb-6">
-                    <h3 class="text-2xl font-bold text-white mb-3" itemprop="name">Enterprise Dashboard Solutions</h3>
-                    <p class="text-gray-300 leading-relaxed mb-4" itemprop="description">
-                        Engineered custom data visualization dashboards for ticket systems and project management, 
-                        displayed on digital signage to increase operational awareness and team efficiency.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" itemprop="applicationCategory">Data Visualization</span>
-                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text.sm font-medium" itemprop="applicationCategory">Business Intelligence</span>
-                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text.sm font-medium" itemprop="applicationCategory">Real-time Monitoring</span>
-                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text.sm font-medium" itemprop="applicationCategory">UX Design</span>
-                    </div>
-                    <meta itemprop="applicationCategory" content="BusinessApplication" />
+                <span class="block w-full text-center bg-gray-700 text-gray-500 font-retro text-xs py-3 cursor-not-allowed" aria-label="Project is proprietary">
+                    PROPRIETARY
+                </span>
+                <meta itemprop="applicationCategory" content="BusinessApplication">
+            </div>
+        </article>
+
+        <!-- Project 4: Dashboard -->
+        <article class="group bg-black border-4 border-gray-700 hover:border-retro-purple transition-all duration-100 hover:-translate-y-2" itemscope itemtype="https://schema.org/SoftwareApplication">
+            <div class="bg-gray-800 h-32 flex items-center justify-center border-b-4 border-gray-700 group-hover:bg-retro-purple group-hover:border-retro-purple transition-colors">
+                <i class="fa-solid fa-chart-line text-6xl text-gray-600 group-hover:text-black" aria-hidden="true"></i>
+            </div>
+            <div class="p-6">
+                <h3 class="font-retro text-white text-sm mb-2 group-hover:text-retro-purple" itemprop="name">Real-Time Analytics Dashboard</h3>
+                <p class="font-terminal text-xl text-gray-400 mb-4 line-clamp-3" itemprop="description">
+                    Data visualization dashboards for ticket systems and project management displayed on digital signage.
+                </p>
+                <div class="flex gap-2 mb-4 flex-wrap" aria-label="Technologies used">
+                    <span class="bg-retro-bg text-retro-purple px-2 font-retro text-[10px] border border-retro-purple">JS</span>
+                    <span class="bg-retro-bg text-retro-purple px-2 font-retro text-[10px] border border-retro-purple">API</span>
+                    <span class="bg-retro-bg text-retro-purple px-2 font-retro text-[10px] border border-retro-purple">D3.js</span>
                 </div>
-            </article>
-        </div>
+                <span class="block w-full text-center bg-gray-700 text-gray-500 font-retro text-xs py-3 cursor-not-allowed" aria-label="Internal project">
+                    INTERNAL
+                </span>
+                <meta itemprop="applicationCategory" content="BusinessApplication">
+            </div>
+        </article>
+
+        <!-- Project 5: GitHub Profile -->
+        <article class="group bg-black border-4 border-gray-700 hover:border-retro-cyan transition-all duration-100 hover:-translate-y-2">
+            <div class="bg-gray-800 h-32 flex items-center justify-center border-b-4 border-gray-700 group-hover:bg-retro-cyan group-hover:border-retro-cyan transition-colors">
+                <i class="fa-brands fa-github text-6xl text-gray-600 group-hover:text-black" aria-hidden="true"></i>
+            </div>
+            <div class="p-6">
+                <h3 class="font-retro text-white text-sm mb-2 group-hover:text-retro-cyan">Open Source Projects</h3>
+                <p class="font-terminal text-xl text-gray-400 mb-4 line-clamp-3">
+                    Open source contributions and personal projects on GitHub. Check out my repositories and contributions.
+                </p>
+                <div class="flex gap-2 mb-4 flex-wrap" aria-label="Project type">
+                    <span class="bg-retro-bg text-retro-cyan px-2 font-retro text-[10px] border border-retro-cyan">OPEN</span>
+                    <span class="bg-retro-bg text-retro-cyan px-2 font-retro text-[10px] border border-retro-cyan">SOURCE</span>
+                </div>
+                <a href="https://github.com/JacobKukuk" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-gray-700 text-white font-retro text-xs py-3 hover:bg-retro-cyan hover:text-black transition-colors">
+                    VIEW GITHUB
+                </a>
+            </div>
+        </article>
+
+        <!-- Project 6: This Website -->
+        <article class="group bg-black border-4 border-gray-700 hover:border-retro-yellow transition-all duration-100 hover:-translate-y-2" itemscope itemtype="https://schema.org/WebSite">
+            <div class="bg-gray-800 h-32 flex items-center justify-center border-b-4 border-gray-700 group-hover:bg-retro-yellow group-hover:border-retro-yellow transition-colors">
+                <i class="fa-solid fa-code text-6xl text-gray-600 group-hover:text-black" aria-hidden="true"></i>
+            </div>
+            <div class="p-6">
+                <h3 class="font-retro text-white text-sm mb-2 group-hover:text-retro-yellow" itemprop="name">This Portfolio Website</h3>
+                <p class="font-terminal text-xl text-gray-400 mb-4 line-clamp-3" itemprop="description">
+                    Built with .NET 9, Razor Pages, and Tailwind CSS. Features retro CRT effects and SEO optimization.
+                </p>
+                <div class="flex gap-2 mb-4 flex-wrap" aria-label="Technologies used">
+                    <span class="bg-retro-bg text-retro-yellow px-2 font-retro text-[10px] border border-retro-yellow">.NET 9</span>
+                    <span class="bg-retro-bg text-retro-yellow px-2 font-retro text-[10px] border border-retro-yellow">RAZOR</span>
+                </div>
+                <a href="https://github.com/JacobKukuk/jacobkukuk.com" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-gray-700 text-white font-retro text-xs py-3 hover:bg-retro-yellow hover:text-black transition-colors" itemprop="url">
+                    VIEW SOURCE
+                </a>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="mb-32 scroll-mt-20" aria-labelledby="experience-title">
+    <header class="flex items-center gap-4 mb-8">
+        <i class="fa-solid fa-scroll text-retro-purple text-4xl" aria-hidden="true"></i>
+        <h2 id="experience-title" class="font-retro text-2xl md:text-3xl text-white text-glow-pink">PROFESSIONAL EXPERIENCE</h2>
+    </header>
+
+    <div class="space-y-6" role="feed" aria-label="Work experience timeline">
+        <!-- Job 1 -->
+        <article class="bg-black border-l-8 border-retro-cyan p-6 relative overflow-hidden" itemscope itemtype="https://schema.org/OrganizationRole">
+            <div class="absolute right-0 top-0 text-[100px] text-gray-900 font-retro -z-10 opacity-20 rotate-12" aria-hidden="true">2024</div>
+            <h3 class="font-retro text-white text-lg" itemprop="roleName">Database & SharePoint Administrator</h3>
+            <p class="text-retro-cyan font-terminal text-xl mb-2" itemprop="memberOf" itemscope itemtype="https://schema.org/GovernmentOrganization">
+                <a href="https://nvcourts.gov/" target="_blank" rel="noopener noreferrer" class="hover:underline" itemprop="url"><span itemprop="name">Nevada Supreme Court</span></a>
+            </p>
+            <time class="text-gray-500 font-terminal" datetime="2024-01" itemprop="startDate">January 2024 - Present</time>
+            <ul class="font-terminal text-xl text-gray-300 mt-4 space-y-2" itemprop="description">
+                <li><span class="text-retro-neon" aria-hidden="true">&gt;</span> Architected custom C# integration for SharePoint Online cloud file access</li>
+                <li><span class="text-retro-neon" aria-hidden="true">&gt;</span> Administer statewide Citrix platforms and Office 365 environments</li>
+                <li><span class="text-retro-neon" aria-hidden="true">&gt;</span> Manage SQL Server infrastructure and data security compliance</li>
+            </ul>
+        </article>
+
+        <!-- Job 2 -->
+        <article class="bg-black border-l-8 border-retro-purple p-6 relative overflow-hidden" itemscope itemtype="https://schema.org/OrganizationRole">
+            <div class="absolute right-0 top-0 text-[100px] text-gray-900 font-retro -z-10 opacity-20 rotate-12" aria-hidden="true">2021</div>
+            <h3 class="font-retro text-white text-lg" itemprop="roleName">System Administrator & Software Developer</h3>
+            <p class="text-retro-purple font-terminal text-xl mb-2" itemprop="memberOf" itemscope itemtype="https://schema.org/Organization">
+                <span itemprop="name">College Loan Corporation</span>
+            </p>
+            <time class="text-gray-500 font-terminal" datetime="2021-12/2023-11">December 2021 - November 2023</time>
+            <ul class="font-terminal text-xl text-gray-300 mt-4 space-y-2" itemprop="description">
+                <li><span class="text-retro-neon" aria-hidden="true">&gt;</span> Developed full-stack Visitor Kiosk system with C# and SQL Server</li>
+                <li><span class="text-retro-neon" aria-hidden="true">&gt;</span> Engineered real-time data visualization dashboards</li>
+                <li><span class="text-retro-neon" aria-hidden="true">&gt;</span> Administered 3CX phone system with Twilio SIP Trunking</li>
+            </ul>
+        </article>
+
+        <!-- Job 3 -->
+        <article class="bg-black border-l-8 border-retro-green p-6 relative overflow-hidden" itemscope itemtype="https://schema.org/OrganizationRole">
+            <div class="absolute right-0 top-0 text-[100px] text-gray-900 font-retro -z-10 opacity-20 rotate-12" aria-hidden="true">2018</div>
+            <h3 class="font-retro text-white text-lg" itemprop="roleName">Senior Windows System Administrator</h3>
+            <p class="text-retro-green font-terminal text-xl mb-2" itemprop="memberOf" itemscope itemtype="https://schema.org/Organization">
+                <span itemprop="name">Whidbey Telecom</span>
+            </p>
+            <time class="text-gray-500 font-terminal" datetime="2018-09/2019-05">September 2018 - May 2019</time>
+            <ul class="font-terminal text-xl text-gray-300 mt-4 space-y-2" itemprop="description">
+                <li><span class="text-retro-neon" aria-hidden="true">&gt;</span> Managed enterprise Exchange, IIS, and SharePoint farms</li>
+                <li><span class="text-retro-neon" aria-hidden="true">&gt;</span> PowerShell automation for infrastructure management</li>
+                <li><span class="text-retro-neon" aria-hidden="true">&gt;</span> Upgraded VMware ESXi environment with Nvidia vGPU</li>
+            </ul>
+        </article>
+    </div>
+
+    <div class="text-center mt-8">
+        <a href="https://www.linkedin.com/in/jacobkukuk/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center font-retro text-sm text-retro-cyan border-2 border-retro-cyan px-6 py-3 hover:bg-retro-cyan hover:text-black transition-colors">
+            <i class="fa-brands fa-linkedin mr-2" aria-hidden="true"></i>
+            VIEW FULL EXPERIENCE ON LINKEDIN
+        </a>
     </div>
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="py-20 px-4 sm:px-6 lg:px-8" itemscope itemtype="https://schema.org/ContactPage">
-    <div class="max-w-4xl mx-auto text-center">
-        <div class="animate-on-scroll">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">Let's Build Something Amazing</h2>
-            <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-                Whether you have a project in mind, want to discuss technology, or just want to connect, 
-                I'd love to hear from you. 
-            </p>
-            
-            <div class="grid md:grid-cols-2 gap-8 mb-12">
-                <!-- Email -->
-                <article class="glass p-6 rounded-2xl hover:bg-white/20 transition-all duration-300" 
-                         itemscope itemtype="https://schema.org/ContactPoint">
-                    <meta itemprop="contactType" content="Customer Service" />
-                    <div class="text-center">
-                        <div class="w-12 h-12 bg-gradient-to-r from-primary-500 to-primary-700 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-lg font-semibold text-white mb-2">Direct Email</h3>
-                        <a href="mailto:me@jacobkukuk.com" class="text-primary-400 hover:text-primary-300 font-medium" 
-                           aria-label="Send email to Jacob Kukuk"
-                           itemprop="email">
-                            me@jacobkukuk.com
-                        </a>
-                        <p class="text-gray-400 text-sm mt-2">Fastest way to reach me directly</p>
-                    </div>
-                </article>
-                
-                <!-- LinkedIn -->
-                <article class="glass p-6 rounded-2xl hover:bg-white/20 transition-all duration-300">
-                    <div class="text-center">
-                        <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
-                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-lg font-semibold text-white mb-2">Professional Network</h3>
-                        <a href="https://www.linkedin.com/in/jacobkukuk/" target="_blank" rel="noopener noreferrer" 
-                           class="text-primary-400 hover:text-primary-300 font-medium"
-                           aria-label="Connect with Jacob Kukuk on LinkedIn">
-                            Connect on LinkedIn
-                        </a>
-                        <p class="text-gray-400 text-sm mt-2">Let's network and collaborate</p>
-                    </div>
-                </article>
-            </div>
-            
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="mailto:me@jacobkukuk.com" 
-                   class="inline-flex items-center px-8 py-4 bg-primary-600 text-white font-semibold rounded-full hover:bg-primary-700 transition-all duration-300 transform hover:scale-105 animate-glow"
-                   aria-label="Send message to Jacob Kukuk">
-                    <svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    Send Me a Message
-                </a>
-                <a href="https://www.linkedin.com/in/jacobkukuk/" target="_blank" rel="noopener noreferrer"
-                   class="inline-flex items-center px-8 py-4 border-2 border-primary-500 text-primary-400 font-semibold rounded-full hover:bg-primary-500 hover:text-white transition-all duration-300 transform hover:scale-105"
-                   aria-label="Connect with Jacob Kukuk on LinkedIn">
-                    <svg class="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                    Let's Connect
-                </a>
-            </div>
+<section id="contact" class="pb-24 scroll-mt-20" aria-labelledby="contact-title" itemscope itemtype="https://schema.org/ContactPage">
+    <div class="border-4 border-dashed border-retro-neon p-8 text-center bg-black/50">
+        <h2 id="contact-title" class="font-retro text-3xl text-white mb-6">LET'S CONNECT</h2>
+        <p class="font-terminal text-2xl text-retro-cyan mb-8">
+            Have a project in mind? Looking for a technical consultant?<br>
+            <strong class="text-white">Let's build something amazing together.</strong>
+        </p>
+        
+        <a href="mailto:me@jacobkukuk.com" class="inline-block bg-retro-neon text-black font-retro px-8 py-4 text-sm hover:scale-105 transition-transform shadow-[4px_4px_0px_white]" itemprop="email">
+            <i class="fa-solid fa-envelope mr-2" aria-hidden="true"></i>SEND EMAIL
+        </a>
+        
+        <div class="mt-8 flex justify-center gap-8 text-3xl text-gray-500" role="list" aria-label="Social media links">
+            <a href="https://github.com/JacobKukuk" target="_blank" rel="noopener noreferrer me" class="hover:text-white transition-colors" aria-label="GitHub profile" itemprop="sameAs">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jacobkukuk/" target="_blank" rel="noopener noreferrer me" class="hover:text-blue-500 transition-colors" aria-label="LinkedIn profile" itemprop="sameAs">
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="https://vonet.org" target="_blank" rel="noopener noreferrer" class="hover:text-retro-green transition-colors" aria-label="Vegas Open Network website">
+                <i class="fa-solid fa-wifi" aria-hidden="true"></i>
+            </a>
         </div>
     </div>
 </section>

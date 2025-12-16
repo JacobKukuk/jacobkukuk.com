@@ -1,34 +1,41 @@
+# =============================================================================
 # robots.txt for jacobkukuk.com
-# Optimized for search engine crawling
+# Jacob Kukuk - Full-Stack Developer & Systems Engineer | Las Vegas, NV
+# =============================================================================
 
+# Default rules for all crawlers
 User-agent: *
 Allow: /
 
-# Sitemap location
+# Sitemap location (primary)
 Sitemap: https://jacobkukuk.com/sitemap.xml
 
-# Disallow certain file types and directories that don't need indexing
-Disallow: /*.css$
-Disallow: /*.js$
+# =============================================================================
+# Disallow internal/build directories
+# =============================================================================
 Disallow: /lib/
 Disallow: /.well-known/
 Disallow: /obj/
 Disallow: /bin/
 
-# Allow important static files and images
+# =============================================================================
+# Allow important resources
+# =============================================================================
 Allow: /favicon.ico
 Allow: /apple-touch-icon.png
 Allow: /jacobkukukcityscape.png
-Allow: /*.png$
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.webp$
+Allow: /images/
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /humans.txt
 Allow: /site.webmanifest
+Allow: /security.txt
 
-# Crawl delay (be respectful to server resources)
-Crawl-delay: 1
+# =============================================================================
+# Major Search Engine Crawlers
+# =============================================================================
 
-# Specific directives for major search engines
+# Google
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 0
@@ -36,10 +43,189 @@ Crawl-delay: 0
 User-agent: Googlebot-Image
 Allow: /
 
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+User-agent: Storebot-Google
+Allow: /
+
+# Bing
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
 
+User-agent: BingPreview
+Allow: /
+
+User-agent: msnbot
+Allow: /
+Crawl-delay: 1
+
+# Yahoo
 User-agent: Slurp
 Allow: /
 Crawl-delay: 1
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# Yandex
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# =============================================================================
+# AI/LLM Training Crawlers - Allow for visibility and professional presence
+# =============================================================================
+
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Google AI
+User-agent: Google-Extended
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# Microsoft/Bing AI
+User-agent: Copilot
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# Amazon
+User-agent: Amazonbot
+Allow: /
+
+# ByteDance
+User-agent: Bytespider
+Allow: /
+Crawl-delay: 5
+
+# Common Crawl (used for AI training datasets)
+User-agent: CCBot
+Allow: /
+
+# =============================================================================
+# Social Media Crawlers
+# =============================================================================
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Pinterest
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# =============================================================================
+# SEO and Analytics Tools
+# =============================================================================
+
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: MJ12bot
+Allow: /
+Crawl-delay: 10
+
+User-agent: DotBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: rogerbot
+Allow: /
+Crawl-delay: 5
+
+# =============================================================================
+# Block Known Bad Bots
+# =============================================================================
+
+User-agent: SiteAuditBot
+Disallow: /
+
+User-agent: SemrushBot-BA
+Disallow: /
+
+User-agent: MegaIndex
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: SearchAtlas
+Disallow: /
+
+User-agent: Scrapy
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+# =============================================================================
+# Host directive (for search engines that support it)
+# =============================================================================
+Host: https://jacobkukuk.com

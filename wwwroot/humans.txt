@@ -1,5 +1,6 @@
 /* TEAM */
 Developer: Jacob Kukuk
+Title: Full-Stack Developer & Systems Engineer
 Site: https://jacobkukuk.com
 Email: me@jacobkukuk.com
 Location: Las Vegas, Nevada, USA
@@ -7,28 +8,61 @@ LinkedIn: https://www.linkedin.com/in/jacobkukuk/
 GitHub: https://github.com/JacobKukuk
 
 /* SITE */
-Last update: 2025/01/25
-Language: English
-Standards: HTML5, CSS3, JavaScript ES6+
+Last update: 2025/01/27
+Language: English (en-US)
+Doctype: HTML5
+Standards: HTML5, CSS3, JavaScript ES6+, Schema.org, Open Graph
 Components: ASP.NET Core 9, Razor Pages, Tailwind CSS
-IDE: Visual Studio 2022, Visual Studio Code
-Version Control: Git
+IDE: Visual Studio 2022, Visual Studio Code, JetBrains Rider
+Version Control: Git, GitHub
+Analytics: Umami Analytics (privacy-focused, GDPR compliant)
+CDN: Tailwind CSS CDN, Google Fonts, Font Awesome
+
+/* HOSTING */
+Platform: Microsoft Azure
+SSL: Let's Encrypt / Azure Managed
+CDN: Azure CDN
 
 /* THANKS */
-Built with: .NET 9, Tailwind CSS
-Inspired by: Modern web design principles and user-centric development
-Analytics: Umami Analytics (privacy-focused)
-Hosting: Microsoft Azure
+Framework: Microsoft .NET 9
+CSS Framework: Tailwind CSS
+Fonts: Google Fonts (Press Start 2P, VT323)
+Icons: Font Awesome 6
+Inspiration: Retro arcade aesthetics and CRT monitors
+Design Philosophy: User-centric, accessible, performant
 
 /* EXPERTISE */
-Full-Stack Development: C#, .NET, JavaScript, HTML/CSS
-Systems Engineering: Windows Server, Active Directory, VMware
-Cloud Platforms: Microsoft Azure, Amazon AWS, Office 365
-Database Administration: SQL Server, MySQL, Redis
-Network Engineering: BGP, OSPF, Mesh Networks
-DevOps: CI/CD, PowerShell automation, Infrastructure as Code
+Full-Stack Development: C#, .NET, ASP.NET Core, Razor Pages, JavaScript, TypeScript, HTML5, CSS3
+Database Administration: SQL Server, T-SQL, MySQL, Redis, SQLite
+Systems Engineering: Windows Server, Active Directory, Group Policy, IIS
+Cloud Platforms: Microsoft Azure, Amazon AWS, Office 365, SharePoint Online
+Virtualization: VMware vSphere, VMware ESXi, Hyper-V, Docker
+Network Engineering: BGP, OSPF, TCP/IP, DNS, DHCP, VPN, Mesh Networks
+DevOps: CI/CD, PowerShell, Bash, Infrastructure as Code, Git
+Telecommunications: 3CX, Twilio, SIP Trunking, VoIP
 
 /* COMMUNITY */
 Vegas Open Network (VONet): https://vonet.org
-Leading community internet initiative in Las Vegas
-Building fair, accessible networking infrastructure
+Mission: Building fair, accessible, community-owned internet infrastructure
+Role: Founder and Lead Engineer
+Focus: Mesh networking for underserved Las Vegas communities
+
+/* PROFESSIONAL */
+Current Role: Database and SharePoint Administrator
+Employer: Nevada Supreme Court
+Experience: 15+ Years in Technology
+Certifications: Self-taught professional with hands-on expertise
+
+/* SECURITY */
+Security Contact: security@jacobkukuk.com
+Responsible Disclosure: https://jacobkukuk.com/.well-known/security.txt
+
+/* ACCESSIBILITY */
+Standards: WCAG 2.1 AA compliance targeted
+Features: Skip navigation, ARIA labels, semantic HTML, keyboard navigation
+Testing: Screen reader compatible, color contrast compliant
+
+/* COPYRIGHT */
+Content: © 2025 Jacob Kukuk
+License: All rights reserved unless otherwise noted
+Open Source: Website source available on GitHub

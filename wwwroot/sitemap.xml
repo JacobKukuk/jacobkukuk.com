@@ -2,58 +2,75 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+        http://www.google.com/schemas/sitemap-image/1.1
+        http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
     
-    <!-- Homepage -->
+    <!-- 
+        Sitemap for jacobkukuk.com
+        Jacob Kukuk - Full-Stack Developer & Systems Engineer
+        Last updated: 2025-01-27
+    -->
+    
+    <!-- Homepage - Primary landing page -->
     <url>
         <loc>https://jacobkukuk.com/</loc>
-        <lastmod>2025-01-25</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2025-01-27</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://jacobkukuk.com/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://jacobkukuk.com/"/>
         <image:image>
             <image:loc>https://jacobkukuk.com/jacobkukukcityscape.png</image:loc>
             <image:title>Jacob Kukuk - Full-Stack Developer and Systems Engineer</image:title>
-            <image:caption>Professional portrait of Jacob Kukuk with Las Vegas cityscape background</image:caption>
+            <image:caption>Professional portrait of Jacob Kukuk, a Las Vegas-based technology professional with cityscape background</image:caption>
+            <image:geo_location>Las Vegas, Nevada, USA</image:geo_location>
+        </image:image>
+        <image:image>
+            <image:loc>https://jacobkukuk.com/images/og-image.png</image:loc>
+            <image:title>Jacob Kukuk Portfolio - Open Graph Image</image:title>
+            <image:caption>Social sharing image for Jacob Kukuk's professional portfolio website</image:caption>
         </image:image>
     </url>
     
-    <!-- About Section (anchor) -->
+    <!-- About Section - Professional biography -->
     <url>
         <loc>https://jacobkukuk.com/#about</loc>
-        <lastmod>2025-01-25</lastmod>
-        <changefreq>quarterly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Experience Section (anchor) -->
-    <url>
-        <loc>https://jacobkukuk.com/#experience</loc>
-        <lastmod>2025-01-25</lastmod>
+        <lastmod>2025-01-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
-    <!-- Skills Section (anchor) -->
+    <!-- Skills Section - Technical expertise -->
     <url>
         <loc>https://jacobkukuk.com/#skills</loc>
-        <lastmod>2025-01-25</lastmod>
-        <changefreq>quarterly</changefreq>
+        <lastmod>2025-01-27</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
-    <!-- Portfolio Section (anchor) -->
+    <!-- Projects Section - Portfolio work -->
     <url>
-        <loc>https://jacobkukuk.com/#portfolio</loc>
-        <lastmod>2025-01-25</lastmod>
+        <loc>https://jacobkukuk.com/#projects</loc>
+        <lastmod>2025-01-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
-    <!-- Contact Section (anchor) -->
+    <!-- Experience Section - Work history -->
+    <url>
+        <loc>https://jacobkukuk.com/#experience</loc>
+        <lastmod>2025-01-27</lastmod>
+        <changefreq>quarterly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Contact Section - Contact information -->
     <url>
         <loc>https://jacobkukuk.com/#contact</loc>
-        <lastmod>2025-01-25</lastmod>
+        <lastmod>2025-01-27</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.7</priority>
     </url>

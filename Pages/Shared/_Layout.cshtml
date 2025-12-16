@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewData["Title"] | Jacob Kukuk - Full-Stack Developer & Systems Engineer</title>
+    <title>@(ViewData["Title"] != null ? $"{ViewData["Title"]} | " : "")Jacob Kukuk - Full-Stack Developer & Systems Engineer | Las Vegas, NV</title>
 
     <!-- Performance and Security -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -18,446 +18,573 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link rel="dns-prefetch" href="//cloud.umami.is">
     <link rel="dns-prefetch" href="//cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
 
     <!-- Preconnect for critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
 
-    <!-- Enhanced SEO Meta Tags -->
-    <meta name="description" content="Jacob Kukuk is a Las Vegas-based Full-Stack Developer and Systems Engineer with over 15 years of experience in C#, .NET, SQL Server, Azure, AWS, VMware, and SharePoint. Specializing in enterprise applications, cloud integration, and community networking initiatives.">
-    <meta name="keywords" content="Jacob Kukuk, Las Vegas developer, full-stack engineer, systems administrator, C# developer, .NET developer, SQL Server expert, SharePoint administrator, Azure consultant, AWS cloud engineer, VMware specialist, BGP networking, OSPF protocols, Vegas Open Network, VONet, Nevada Supreme Court developer, enterprise solutions, database administrator, PowerShell automation, system integration, cloud migration, DevOps engineer, IT consultant, telecommunications, VoIP systems, 3CX, network infrastructure, mesh networking">
+    <!-- Primary SEO Meta Tags -->
+    <meta name="description" content="@(ViewData["Description"] ?? "Jacob Kukuk is a Las Vegas-based Full-Stack Developer and Systems Engineer with 15+ years experience in C#, .NET, Azure, AWS, SQL Server, and enterprise applications. Currently Database & SharePoint Administrator at Nevada Supreme Court.")">
+    <meta name="keywords" content="Jacob Kukuk, Las Vegas developer, full-stack engineer, systems engineer, C# developer, .NET developer, SQL Server expert, SharePoint administrator, Azure consultant, AWS cloud engineer, VMware specialist, Nevada Supreme Court, database administrator, PowerShell automation, DevOps engineer, Vegas Open Network, VONet, mesh networking, BGP routing">
     <meta name="author" content="Jacob Kukuk">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="googlebot" content="index, follow">
-    <meta name="google" content="notranslate">
+    <meta name="creator" content="Jacob Kukuk">
+    <meta name="publisher" content="Jacob Kukuk">
     
-    <!-- Geographic and Contact Information -->
+    <!-- Robots and Indexing -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="google" content="notranslate">
+    <meta name="google-site-verification" content="">
+    
+    <!-- Geographic and Local SEO -->
     <meta name="geo.region" content="US-NV">
-    <meta name="geo.placename" content="Las Vegas">
+    <meta name="geo.placename" content="Las Vegas, Nevada">
     <meta name="geo.position" content="36.1699;-115.1398">
     <meta name="ICBM" content="36.1699, -115.1398">
     
-    <!-- Professional Information -->
-    <meta name="classification" content="Technology Professional">
+    <!-- Professional Classification -->
+    <meta name="classification" content="Technology Professional Portfolio">
     <meta name="category" content="Software Development, Systems Engineering, Cloud Computing">
     <meta name="coverage" content="Worldwide">
     <meta name="distribution" content="Global">
     <meta name="rating" content="General">
+    <meta name="revisit-after" content="7 days">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://jacobkukuk.com/">
+    <link rel="canonical" href="https://jacobkukuk.com@(Context.Request.Path == "/" ? "" : Context.Request.Path)">
     
-    <!-- Alternate URLs for different languages (if you plan to add them) -->
-    <link rel="alternate" hreflang="en" href="https://jacobkukuk.com/">
+    <!-- Alternate URLs and Language -->
+    <link rel="alternate" hreflang="en-US" href="https://jacobkukuk.com/">
     <link rel="alternate" hreflang="x-default" href="https://jacobkukuk.com/">
     
     <!-- Favicon and Icons -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="#ed6f1f">
-    <meta name="msapplication-TileColor" content="#0f172a">
+    <meta name="theme-color" content="#ff0099" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#120b29" media="(prefers-color-scheme: light)">
+    <meta name="msapplication-TileColor" content="#120b29">
+    <meta name="msapplication-config" content="/browserconfig.xml">
 
-    <!-- Enhanced Open Graph Meta Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Jacob Kukuk - Professional Portfolio">
-    <meta property="og:title" content="Jacob Kukuk | Full-Stack Developer & Systems Engineer in Las Vegas">
-    <meta property="og:description" content="Experienced technology professional with 15+ years building enterprise applications, managing cloud infrastructure, and leading community networking initiatives in Las Vegas, Nevada.">
-    <meta property="og:image" content="https://jacobkukuk.com/jacobkukukcityscape.png">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Jacob Kukuk - Digital Polymath Portfolio">
+    <meta property="og:title" content="@(ViewData["OgTitle"] ?? "Jacob Kukuk | Full-Stack Developer & Systems Engineer")">
+    <meta property="og:description" content="@(ViewData["OgDescription"] ?? "Las Vegas-based Full-Stack Developer and Systems Engineer with 15+ years experience. Expert in C#, .NET, Azure, AWS, and enterprise systems.")">
+    <meta property="og:image" content="https://jacobkukuk.com/images/og-image.png">
+    <meta property="og:image:secure_url" content="https://jacobkukuk.com/images/og-image.png">
     <meta property="og:image:alt" content="Jacob Kukuk - Full-Stack Developer and Systems Engineer">
-    <meta property="og:image:width" content="800">
-    <meta property="og:image:height" content="800">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/png">
-    <meta property="og:url" content="https://jacobkukuk.com/">
+    <meta property="og:url" content="https://jacobkukuk.com@(Context.Request.Path == "/" ? "" : Context.Request.Path)">
     <meta property="og:locale" content="en_US">
-
-    <!-- Enhanced Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@@JacobKukuk">
-    <meta name="twitter:creator" content="@@JacobKukuk">
-    <meta name="twitter:title" content="Jacob Kukuk - Full-Stack Developer | Systems Engineer | Digital Polymath">
-    <meta name="twitter:description" content="Las Vegas-based technology professional specializing in enterprise applications, cloud infrastructure, and community networking. 15+ years experience with C#, .NET, Azure, AWS, and VMware.">
-    <meta name="twitter:image" content="https://jacobkukuk.com/jacobkukukcityscape.png">
-    <meta name="twitter:image:alt" content="Jacob Kukuk - Technology Professional Portrait">
-
-    <!-- LinkedIn Article/Profile Tags -->
-    <meta property="article:author" content="https://www.linkedin.com/in/jacobkukuk/">
     <meta property="profile:first_name" content="Jacob">
     <meta property="profile:last_name" content="Kukuk">
     <meta property="profile:username" content="jacobkukuk">
 
-    <!-- Business/Organization Schema -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@@JacobKukuk">
+    <meta name="twitter:creator" content="@@JacobKukuk">
+    <meta name="twitter:title" content="@(ViewData["TwitterTitle"] ?? "Jacob Kukuk - Full-Stack Developer & Systems Engineer")">
+    <meta name="twitter:description" content="@(ViewData["TwitterDescription"] ?? "Digital Polymath based in Las Vegas. 15+ years building enterprise applications, cloud infrastructure, and community networks.")">
+    <meta name="twitter:image" content="https://jacobkukuk.com/images/twitter-card.png">
+    <meta name="twitter:image:alt" content="Jacob Kukuk Portfolio - Retro Console Theme">
+
+    <!-- LinkedIn -->
+    <meta property="article:author" content="https://www.linkedin.com/in/jacobkukuk/">
+    
+    <!-- Person Schema (Primary) -->
     <script type="application/ld+json">
-    @Html.Raw("{")
-        "@Html.Raw("@")context": "https://schema.org",
-        "@Html.Raw("@")type": "Person",
+    {
+        "@@context": "https://schema.org",
+        "@@type": "Person",
+        "@@id": "https://jacobkukuk.com/#person",
         "name": "Jacob Kukuk",
-        "jobTitle": ["Full-Stack Developer", "Systems Engineer", "Database Administrator"],
-        "description": "Experienced Full-Stack Developer and Systems Engineer with over 15 years of expertise in enterprise applications, cloud infrastructure, and community networking initiatives.",
+        "givenName": "Jacob",
+        "familyName": "Kukuk",
+        "jobTitle": ["Full-Stack Developer", "Systems Engineer", "Database Administrator", "SharePoint Administrator"],
+        "description": "Self-taught Full-Stack Developer and Systems Engineer with over 15 years of experience building enterprise applications, managing cloud infrastructure, and leading community networking initiatives in Las Vegas, Nevada.",
         "url": "https://jacobkukuk.com/",
+        "email": "me@@jacobkukuk.com",
+        "image": {
+            "@@type": "ImageObject",
+            "@@id": "https://jacobkukuk.com/#image",
+            "url": "https://jacobkukuk.com/jacobkukukcityscape.png",
+            "contentUrl": "https://jacobkukuk.com/jacobkukukcityscape.png",
+            "width": 800,
+            "height": 800,
+            "caption": "Jacob Kukuk - Full-Stack Developer and Systems Engineer"
+        },
         "sameAs": [
             "https://www.linkedin.com/in/jacobkukuk/",
             "https://github.com/JacobKukuk",
             "https://vonet.org"
         ],
-        "image": @Html.Raw("{")
-            "@Html.Raw("@")type": "ImageObject",
-            "url": "https://jacobkukuk.com/jacobkukukcityscape.png",
-            "width": 800,
-            "height": 800
-        @Html.Raw("}"),
-        "address": @Html.Raw("{")
-            "@Html.Raw("@")type": "PostalAddress",
+        "address": {
+            "@@type": "PostalAddress",
             "addressLocality": "Las Vegas",
-            "addressRegion": "Nevada",
-            "addressCountry": "United States"
-        @Html.Raw("}"),
-        "worksFor": @Html.Raw("{")
-            "@Html.Raw("@")type": "Organization",
+            "addressRegion": "NV",
+            "addressCountry": "US"
+        },
+        "worksFor": {
+            "@@type": "GovernmentOrganization",
             "name": "Nevada Supreme Court",
-            "description": "Database and SharePoint Administrator"
-        @Html.Raw("}"),
-        "foundingOrganization": @Html.Raw("{")
-            "@Html.Raw("@")type": "Organization",
+            "url": "https://nvcourts.gov/"
+        },
+        "alumniOf": {
+            "@@type": "EducationalOrganization",
+            "name": "Self-Taught Professional"
+        },
+        "knowsAbout": [
+            "C# Programming",
+            ".NET Framework",
+            ".NET Core",
+            "ASP.NET",
+            "Microsoft SQL Server",
+            "T-SQL",
+            "SharePoint Administration",
+            "SharePoint Online",
+            "Microsoft Azure",
+            "Amazon Web Services",
+            "VMware vSphere",
+            "VMware ESXi",
+            "Active Directory",
+            "Windows Server",
+            "PowerShell",
+            "Network Administration",
+            "BGP Routing",
+            "OSPF",
+            "Mesh Networking",
+            "Docker",
+            "CI/CD",
+            "DevOps"
+        ],
+        "hasOccupation": [
+            {
+                "@@type": "Occupation",
+                "name": "Database and SharePoint Administrator",
+                "occupationLocation": {
+                    "@@type": "City",
+                    "name": "Las Vegas",
+                    "containedInPlace": {
+                        "@@type": "State",
+                        "name": "Nevada"
+                    }
+                },
+                "estimatedSalary": {
+                    "@@type": "MonetaryAmountDistribution",
+                    "currency": "USD",
+                    "duration": "P1Y"
+                }
+            }
+        ],
+        "memberOf": {
+            "@@type": "Organization",
             "name": "Vegas Open Network",
             "url": "https://vonet.org",
             "description": "Community-owned internet initiative providing fair and accessible networking across Las Vegas"
-        @Html.Raw("}"),
-        "knowsAbout": [
-            "Full-Stack Development",
-            "C# Programming",
-            ".NET Framework",
-            "Microsoft SQL Server",
-            "SharePoint Administration",
-            "Microsoft Azure",
-            "Amazon Web Services",
-            "VMware Virtualization",
-            "Network Administration",
-            "BGP Routing",
-            "OSPF Protocols",
-            "PowerShell Automation",
-            "Database Design",
-            "Cloud Integration",
-            "System Administration",
-            "DevOps",
-            "Telecommunications",
-            "VoIP Systems"
-        ],
-        "alumniOf": "Self-taught Professional",
-        "hasOccupation": @Html.Raw("{")
-            "@Html.Raw("@")type": "Occupation",
-            "name": "Full-Stack Developer and Systems Engineer",
-            "occupationLocation": @Html.Raw("{")
-                "@Html.Raw("@")type": "City",
-                "name": "Las Vegas, Nevada"
-            @Html.Raw("}"),
-            "skills": "C#, .NET, SQL Server, Azure, AWS, VMware, SharePoint, PowerShell, JavaScript, Network Administration"
-        @Html.Raw("}")
-    @Html.Raw("}")
+        }
+    }
     </script>
 
-    <!-- Website Schema -->
+    <!-- WebSite Schema -->
     <script type="application/ld+json">
-    @Html.Raw("{")
-        "@Html.Raw("@")context": "https://schema.org",
-        "@Html.Raw("@")type": "WebSite",
+    {
+        "@@context": "https://schema.org",
+        "@@type": "WebSite",
+        "@@id": "https://jacobkukuk.com/#website",
         "name": "Jacob Kukuk - Professional Portfolio",
+        "alternateName": "KUKUK_OS",
         "url": "https://jacobkukuk.com/",
         "description": "Professional portfolio of Jacob Kukuk, Full-Stack Developer and Systems Engineer based in Las Vegas, Nevada.",
-        "author": @Html.Raw("{")
-            "@Html.Raw("@")type": "Person",
-            "name": "Jacob Kukuk"
-        @Html.Raw("}"),
+        "publisher": {
+            "@@id": "https://jacobkukuk.com/#person"
+        },
         "inLanguage": "en-US",
-        "copyrightYear": "2025",
-        "copyrightHolder": @Html.Raw("{")
-            "@Html.Raw("@")type": "Person",
-            "name": "Jacob Kukuk"
-        @Html.Raw("}"),
-        "potentialAction": @Html.Raw("{")
-            "@Html.Raw("@")type": "SearchAction",
-            "target": @Html.Raw("{")
-                "@Html.Raw("@")type": "EntryPoint",
-                "urlTemplate": "https://jacobkukuk.com/#{search_term_string}"
-            @Html.Raw("}"),
+        "copyrightYear": "@DateTime.Now.Year",
+        "copyrightHolder": {
+            "@@id": "https://jacobkukuk.com/#person"
+        },
+        "potentialAction": {
+            "@@type": "SearchAction",
+            "target": {
+                "@@type": "EntryPoint",
+                "urlTemplate": "https://jacobkukuk.com/?q={search_term_string}"
+            },
             "query-input": "required name=search_term_string"
-        @Html.Raw("}")
-    @Html.Raw("}")
+        }
+    }
+    </script>
+
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+    {
+        "@@context": "https://schema.org",
+        "@@type": "ProfilePage",
+        "@@id": "https://jacobkukuk.com/#webpage",
+        "url": "https://jacobkukuk.com/",
+        "name": "Jacob Kukuk - Full-Stack Developer & Systems Engineer Portfolio",
+        "description": "Professional portfolio showcasing 15+ years of experience in full-stack development, systems engineering, and cloud infrastructure.",
+        "isPartOf": {
+            "@@id": "https://jacobkukuk.com/#website"
+        },
+        "about": {
+            "@@id": "https://jacobkukuk.com/#person"
+        },
+        "mainEntity": {
+            "@@id": "https://jacobkukuk.com/#person"
+        },
+        "datePublished": "2024-01-01",
+        "dateModified": "@DateTime.Now.ToString("yyyy-MM-dd")",
+        "inLanguage": "en-US",
+        "primaryImageOfPage": {
+            "@@id": "https://jacobkukuk.com/#image"
+        },
+        "breadcrumb": {
+            "@@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://jacobkukuk.com/"
+                }
+            ]
+        }
+    }
+    </script>
+
+    <!-- Professional Service Schema -->
+    <script type="application/ld+json">
+    {
+        "@@context": "https://schema.org",
+        "@@type": "ProfessionalService",
+        "@@id": "https://jacobkukuk.com/#service",
+        "name": "Jacob Kukuk - Technology Consulting",
+        "description": "Full-stack development, systems engineering, cloud integration, and database administration services.",
+        "url": "https://jacobkukuk.com/",
+        "email": "me@@jacobkukuk.com",
+        "areaServed": {
+            "@@type": "GeoCircle",
+            "geoMidpoint": {
+                "@@type": "GeoCoordinates",
+                "latitude": 36.1699,
+                "longitude": -115.1398
+            },
+            "geoRadius": "50000"
+        },
+        "priceRange": "$$",
+        "serviceType": [
+            "Full-Stack Development",
+            "Systems Engineering",
+            "Database Administration",
+            "Cloud Integration",
+            "SharePoint Administration",
+            "Network Infrastructure"
+        ],
+        "provider": {
+            "@@id": "https://jacobkukuk.com/#person"
+        }
+    }
     </script>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Google Fonts: Pixel Style -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
+                    fontFamily: {
+                        'retro': ['"Press Start 2P"', 'cursive'],
+                        'terminal': ['"VT323"', 'monospace'],
+                    },
                     colors: {
-                        primary: {
-                            50: '#fef7ee',
-                            100: '#fdead7',
-                            200: '#fad1ae',
-                            300: '#f6b27b',
-                            400: '#f18b47',
-                            500: '#ed6f1f',
-                            600: '#de5615',
-                            700: '#b84213',
-                            800: '#923618',
-                            900: '#752f16',
-                        },
-                        dark: {
-                            50: '#f8fafc',
-                            100: '#f1f5f9',
-                            200: '#e2e8f0',
-                            300: '#cbd5e1',
-                            400: '#94a3b8',
-                            500: '#64748b',
-                            600: '#475569',
-                            700: '#334155',
-                            800: '#1e293b',
-                            900: '#0f172a',
+                        retro: {
+                            bg: '#120b29',
+                            term: '#0c0c0c',
+                            neon: '#ff0099',
+                            cyan: '#00f3ff',
+                            green: '#39ff14',
+                            yellow: '#fcee0a',
+                            purple: '#b026ff',
                         }
                     },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'Consolas', 'monospace'],
-                    },
                     animation: {
-                        'fade-in': 'fadeIn 0.6s ease-out forwards',
-                        'slide-up': 'slideUp 0.6s ease-out forwards',
-                        'float': 'float 6s ease-in-out infinite',
-                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'blink': 'blink 1s step-end infinite',
+                        'flicker': 'flicker 0.15s infinite',
+                    },
+                    keyframes: {
+                        blink: {
+                            '0%, 100%': { opacity: '1' },
+                            '50%': { opacity: '0' },
+                        },
+                        flicker: {
+                            '0%': { opacity: '0.97' },
+                            '50%': { opacity: '1' },
+                            '100%': { opacity: '0.98' },
+                        }
                     }
                 }
             }
         }
     </script>
-    
-    <!-- Google Fonts - Optimized Loading -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    
     <style>
+        /* CRT & Retro Effects */
         body {
-            font-family: 'Inter', sans-serif;
+            background-color: #050505;
+            overflow-x: hidden;
+            cursor: crosshair;
         }
-        
-        /* Custom animations */
-        @@keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        @@keyframes slideUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        @@keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        @@keyframes glow {
-            from { box-shadow: 0 0 20px rgba(237, 111, 31, 0.3); }
-            to { box-shadow: 0 0 30px rgba(237, 111, 31, 0.6); }
-        }
-        
-        /* Smooth scrolling and fade-in effects */
-        .fade-in { 
-            opacity: 0; 
-            animation: fadeIn 0.6s ease-out forwards; 
-        }
-        
-        .fade-in-delay-1 { animation-delay: 0.2s; }
-        .fade-in-delay-2 { animation-delay: 0.4s; }
-        .fade-in-delay-3 { animation-delay: 0.6s; }
-        .fade-in-delay-4 { animation-delay: 0.8s; }
-        .fade-in-delay-5 { animation-delay: 1.0s; }
-        .fade-in-delay-6 { animation-delay: 1.2s; }
-        .fade-in-delay-7 { animation-delay: 1.4s; }
-        .fade-in-delay-8 { animation-delay: 1.6s; }
-        
-        /* Glass morphism effect */
-        .glass {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        /* Dark glass effect */
-        .dark-glass {
-            background: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        /* Gradient backgrounds */
-        .gradient-bg {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-        }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, #ed6f1f 0%, #f18b47 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: #1e293b;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: #ed6f1f;
-            border-radius: 4px;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background: #de5615;
-        }
-        
-        /* Navigation styles */
-        .nav-item {
+
+        /* The CRT Screen Container */
+        .crt-container {
             position: relative;
-            transition: all 0.3s ease;
+            min-height: 100vh;
+            background-color: #120b29;
+            background-image: linear-gradient(0deg, transparent 24%, rgba(0, 255, 255, .05) 25%, rgba(0, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(0, 255, 255, .05) 75%, rgba(0, 255, 255, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(0, 255, 255, .05) 25%, rgba(0, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(0, 255, 255, .05) 75%, rgba(0, 255, 255, .05) 76%, transparent 77%, transparent);
+            background-size: 50px 50px;
+        }
+
+        /* Scanlines */
+        .scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2));
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        /* Vignette / Screen Curvature Illusion */
+        .vignette {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle, rgba(0,0,0,0) 60%, rgba(0,0,0,0.6) 100%);
+            pointer-events: none;
+            z-index: 51;
+        }
+
+        /* Text Glow */
+        .text-glow-pink { text-shadow: 2px 2px 0px #880055, 0 0 10px #ff0099; }
+        .text-glow-cyan { text-shadow: 2px 2px 0px #005555, 0 0 10px #00f3ff; }
+        .text-glow-green { text-shadow: 2px 2px 0px #005500, 0 0 10px #39ff14; }
+        
+        /* Box Styles */
+        .retro-box {
+            background: rgba(0, 0, 0, 0.8);
+            border: 4px solid #fff;
+            box-shadow: 6px 6px 0px #ff0099;
+            position: relative;
         }
         
-        .nav-item::after {
+        .retro-box::after {
             content: '';
             position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(135deg, #ed6f1f, #f18b47);
-            transition: width 0.3s ease;
+            top: 4px;
+            left: 4px;
+            right: 4px;
+            bottom: 4px;
+            border: 2px solid #00f3ff;
+            pointer-events: none;
         }
-        
-        .nav-item:hover::after {
-            width: 100%;
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 16px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #00f3ff;
+            border: 2px solid #000;
+        }
+
+        /* Boot Screen */
+        #boot-screen {
+            position: fixed;
+            inset: 0;
+            background: #000;
+            z-index: 100;
+            font-family: 'VT323', monospace;
+            color: #39ff14;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            font-size: 1.5rem;
         }
     </style>
 
-    <!-- Analytics - Umami -->
+    <!-- Analytics - Umami (Privacy-focused) -->
     <script defer src="https://cloud.umami.is/script.js" data-website-id="908a8a9d-5953-47bc-b888-f278297c6060"></script>
+    
+    @await RenderSectionAsync("Head", required: false)
 </head>
-<body class="gradient-bg text-white antialiased overflow-x-hidden">
+<body class="selection:bg-retro-cyan selection:text-black">
     <!-- Skip Navigation for Accessibility -->
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-primary-600 text-white p-4 z-50">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-retro-neon text-black p-4 z-[200] font-retro text-xs">
         Skip to main content
     </a>
 
-    <!-- Background effects -->
-    <div class="fixed inset-0 z-0" aria-hidden="true">
-        <!-- Animated gradient orbs -->
-        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-primary-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
-        <div class="absolute top-3/4 right-1/4 w-64 h-64 bg-primary-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style="animation-delay: 2s;"></div>
-        <div class="absolute bottom-1/4 left-1/3 w-64 h-64 bg-primary-700 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style="animation-delay: 4s;"></div>
+    <!-- Boot Screen -->
+    <div id="boot-screen" aria-hidden="true">
+        <div id="boot-text"></div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 dark-glass" role="navigation" aria-label="Main navigation">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <!-- Logo -->
-                <div class="flex-shrink-0">
-                    <a href="#home" class="text-2xl font-bold gradient-text" aria-label="Jacob Kukuk - Homepage">Jacob Kukuk</a>
+    <!-- CRT Overlay Effects -->
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+
+    <div class="crt-container animate-flicker">
+        
+        <!-- Retro Header / HUD -->
+        <header class="border-b-4 border-retro-cyan bg-black/90 p-4 sticky top-0 z-40" role="banner">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-4">
+                    <div class="w-8 h-8 bg-retro-neon animate-pulse" aria-hidden="true"></div>
+                    <a href="/" class="font-retro text-white text-lg md:text-xl tracking-widest text-glow-cyan" aria-label="Jacob Kukuk Homepage">
+                        KUKUK<span class="text-retro-neon">_OS</span> <span class="text-xs text-retro-green">v1.0</span>
+                    </a>
                 </div>
                 
-                <!-- Desktop Navigation -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home" class="nav-item text-gray-300 hover:text-white px-3 py-2 text-sm font-medium" aria-label="Home section">Home</a>
-                        <a href="#about" class="nav-item text-gray-300 hover:text-white px-3 py-2 text-sm font-medium" aria-label="About section">About</a>
-                        <a href="#experience" class="nav-item text-gray-300 hover:text-white px-3 py-2 text-sm font-medium" aria-label="Experience section">Experience</a>
-                        <a href="#skills" class="nav-item text-gray-300 hover:text-white px-3 py-2 text-sm font-medium" aria-label="Technical skills section">Skills</a>
-                        <a href="#portfolio" class="nav-item text-gray-300 hover:text-white px-3 py-2 text-sm font-medium" aria-label="Portfolio section">Portfolio</a>
-                        <a href="#contact" class="nav-item text-gray-300 hover:text-white px-3 py-2 text-sm font-medium" aria-label="Contact section">Contact</a>
+                <nav class="font-terminal text-2xl space-x-6 text-retro-cyan" role="navigation" aria-label="Main navigation">
+                    <a href="#about" class="hover:text-retro-yellow hover:underline decoration-4 underline-offset-4">[BIO]</a>
+                    <a href="#skills" class="hover:text-retro-yellow hover:underline decoration-4 underline-offset-4">[STATS]</a>
+                    <a href="#projects" class="hover:text-retro-yellow hover:underline decoration-4 underline-offset-4">[MISSIONS]</a>
+                    <a href="#contact" class="hover:text-retro-yellow hover:underline decoration-4 underline-offset-4">[CONNECT]</a>
+                </nav>
+
+                <div class="hidden md:block font-retro text-xs text-retro-green text-right" aria-label="Status display">
+                    <div>SCORE: <span id="score" aria-live="polite">000000</span></div>
+                    <div>LOC: LAS_VEGAS</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main id="main-content" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10" role="main">
+            @RenderBody()
+        </main>
+
+        <!-- Footer -->
+        <footer class="border-t-4 border-retro-cyan/30 mt-20 pt-8 pb-8 relative z-10" role="contentinfo">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-3 gap-8 mb-8 font-terminal text-lg">
+                    <!-- Quick Links -->
+                    <nav aria-label="Footer navigation">
+                        <h3 class="font-retro text-retro-cyan text-sm mb-4">NAVIGATION</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="#about" class="hover:text-retro-yellow transition-colors">&gt; About</a></li>
+                            <li><a href="#skills" class="hover:text-retro-yellow transition-colors">&gt; Skills</a></li>
+                            <li><a href="#projects" class="hover:text-retro-yellow transition-colors">&gt; Projects</a></li>
+                            <li><a href="#experience" class="hover:text-retro-yellow transition-colors">&gt; Experience</a></li>
+                            <li><a href="#contact" class="hover:text-retro-yellow transition-colors">&gt; Contact</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <!-- Connect -->
+                    <div>
+                        <h3 class="font-retro text-retro-neon text-sm mb-4">CONNECT</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="https://github.com/JacobKukuk" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors"><i class="fa-brands fa-github mr-2" aria-hidden="true"></i>GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/jacobkukuk/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition-colors"><i class="fa-brands fa-linkedin mr-2" aria-hidden="true"></i>LinkedIn</a></li>
+                            <li><a href="mailto:me@jacobkukuk.com" class="hover:text-retro-neon transition-colors"><i class="fa-solid fa-envelope mr-2" aria-hidden="true"></i>Email</a></li>
+                            <li><a href="https://vonet.org" target="_blank" rel="noopener noreferrer" class="hover:text-retro-green transition-colors"><i class="fa-solid fa-wifi mr-2" aria-hidden="true"></i>VONet</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Info -->
+                    <div>
+                        <h3 class="font-retro text-retro-green text-sm mb-4">SYSTEM INFO</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li>&gt; Built with .NET 9</li>
+                            <li>&gt; Razor Pages</li>
+                            <li>&gt; Tailwind CSS</li>
+                            <li><a href="/sitemap.xml" class="hover:text-retro-yellow transition-colors">&gt; Sitemap</a></li>
+                            <li><a href="/humans.txt" class="hover:text-retro-yellow transition-colors">&gt; Humans.txt</a></li>
+                        </ul>
                     </div>
                 </div>
                 
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white p-2" aria-label="Open mobile menu" aria-expanded="false">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
+                <div class="text-center font-terminal text-gray-600 text-xl border-t border-gray-800 pt-6">
+                    <p>&copy; @DateTime.Now.Year <span class="text-white">JACOB KUKUK</span> | Las Vegas, NV | PRESS ESC TO EXIT</p>
                 </div>
             </div>
-        </div>
-        
-        <!-- Mobile Navigation -->
-        <div id="mobile-menu" class="hidden md:hidden dark-glass" aria-label="Mobile navigation menu">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#home" class="block text-gray-300 hover:text-white px-3 py-2 text-base font-medium">Home</a>
-                <a href="#about" class="block text-gray-300 hover:text-white px-3 py-2 text-base font-medium">About</a>
-                <a href="#experience" class="block text-gray-300 hover:text-white px-3 py-2 textBase font-medium">Experience</a>
-                <a href="#skills" class="block text-gray-300 hover:text-white px-3 py-2 textBase font-medium">Skills</a>
-                <a href="#portfolio" class="block text-gray-300 hover:text-white px-3 py-2 textBase font-medium">Portfolio</a>
-                <a href="#contact" class="block text-gray-300 hover:text-white px-3 py-2 textBase font-medium">Contact</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main id="main-content" class="relative z-10 pt-16">
-        @RenderBody()
-    </main>
-
-    <!-- Footer -->
-    <footer class="relative z-10 border-t border-gray-700 mt-20" role="contentinfo">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="text-center">
-                <div class="flex justify-center space-x-6 mb-8">
-                    <!-- Social Links -->
-                    <a href="https://github.com/JacobKukuk" target="_blank" rel="noopener noreferrer" 
-                       class="text-gray-400 hover:text-primary-500 transition-colors duration-300"
-                       aria-label="Visit Jacob Kukuk's GitHub profile">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/jacobkukuk/" target="_blank" rel="noopener noreferrer" 
-                       class="text-gray-400 hover:text-primary-500 transition-colors duration-300"
-                       aria-label="Visit Jacob Kukuk's LinkedIn profile">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                        </svg>
-                    </a>
-                    <a href="mailto:me@jacobkukuk.com" 
-                       class="text-gray-400 hover:text-primary-500 transition-colors duration-300"
-                       aria-label="Send email to Jacob Kukuk">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                    </a>
-                </div>
-                
-                <p class="text-gray-400 text-sm">
-                    © 2024 Jacob Kukuk. Built with ❤️ using .NET 9 and Tailwind CSS.
-                </p>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     <!-- Scripts -->
     <script>
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            
-            menu.classList.toggle('hidden');
-            this.setAttribute('aria-expanded', !isExpanded);
-        });
+        // Boot Sequence Logic
+        const bootText = [
+            "INITIALIZING KUKUK_BIOS v1.0...",
+            "CHECKING MEMORY... 64MB OK",
+            "LOADING DRIVERS... C# READY",
+            "LOADING DRIVERS... SQL READY",
+            "LOADING DRIVERS... AZURE READY",
+            "MOUNTING FILE SYSTEM...",
+            "ESTABLISHING UPLINK TO LAS VEGAS...",
+            "SYSTEM READY."
+        ];
+
+        const bootScreen = document.getElementById('boot-screen');
+        const textContainer = document.getElementById('boot-text');
+        
+        let lineIndex = 0;
+
+        function typeLine() {
+            if (lineIndex < bootText.length) {
+                const line = document.createElement('div');
+                line.textContent = "> " + bootText[lineIndex];
+                textContainer.appendChild(line);
+                lineIndex++;
+                
+                const delay = Math.random() * 300 + 100;
+                setTimeout(typeLine, delay);
+            } else {
+                setTimeout(() => {
+                    bootScreen.style.opacity = '0';
+                    bootScreen.style.transition = 'opacity 0.5s ease';
+                    setTimeout(() => {
+                        bootScreen.style.display = 'none';
+                    }, 500);
+                }, 800);
+            }
+        }
+
+        // Start boot sequence on load
+        window.onload = typeLine;
+
+        // Score Counter Simulation
+        const scoreEl = document.getElementById('score');
+        if (scoreEl) {
+            setInterval(() => {
+                let score = parseInt(scoreEl.innerText);
+                score += Math.floor(Math.random() * 10);
+                scoreEl.innerText = score.toString().padStart(6, '0');
+            }, 2000);
+        }
 
         // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -469,33 +596,10 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
-                }
-                // Close mobile menu if open
-                const mobileMenu = document.getElementById('mobile-menu');
-                const menuButton = document.getElementById('mobile-menu-button');
-                mobileMenu.classList.add('hidden');
-                menuButton.setAttribute('aria-expanded', 'false');
-            });
-        });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
+                    // Update URL without scrolling
+                    history.pushState(null, null, this.getAttribute('href'));
                 }
             });
-        }, observerOptions);
-
-        // Observe all elements with animation classes
-        document.addEventListener('DOMContentLoaded', () => {
-            const animatedElements = document.querySelectorAll('.animate-on-scroll');
-            animatedElements.forEach(el => observer.observe(el));
         });
     </script>
 
