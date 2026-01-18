@@ -134,11 +134,11 @@ app.Use(async (context, next) =>
     // Content Security Policy (updated for Font Awesome CDN)
     headers.Append("Content-Security-Policy",
         "default-src 'self'; " +
-        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cloud.umami.is; " +
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cloud.umami.is https://www.googletagmanager.com https://www.google-analytics.com; " +
         "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; " +
         "font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; " +
         "img-src 'self' data: https: http:; " +
-        "connect-src 'self' https://cloud.umami.is; " +
+        "connect-src 'self' https://cloud.umami.is https://www.google-analytics.com https://analytics.google.com; " +
         "frame-ancestors 'none'; " +
         "base-uri 'self'; " +
         "form-action 'self';");
