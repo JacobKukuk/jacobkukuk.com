@@ -1,13 +1,13 @@
 # Security Policy for jacobkukuk.com
-# Jacob Kukuk - Full-Stack Developer & Systems Engineer
+# Jacob Kukuk - Systems Engineer & Full-Stack Developer
 
 # Contact information for security researchers
-Contact: mailto:security@jacobkukuk.com
 Contact: mailto:me@jacobkukuk.com
+Contact: https://github.com/JacobKukuk/jacobkukuk.com/security/advisories/new
 Contact: https://www.linkedin.com/in/jacobkukuk/
 
-# Our security acknowledgement policy
-Acknowledgments: https://jacobkukuk.com/security-thanks
+# Expiration date (1 year from now)
+Expires: 2026-12-31T23:59:59.000Z
 
 # Preferred languages for communication
 Preferred-Languages: en
@@ -15,14 +15,4 @@ Preferred-Languages: en
 # Canonical URL for this security.txt
 Canonical: https://jacobkukuk.com/.well-known/security.txt
 
-# Policy document
-Policy: https://jacobkukuk.com/security-policy
 
-# Expiration date (update annually)
-Expires: 2026-01-31T23:59:59.000Z
-
-# Hiring information
-Hiring: https://www.linkedin.com/in/jacobkukuk/
-
-# Encryption key (if you have a PGP key, uncomment and add)
-# Encryption: https://jacobkukuk.com/pgp-key.txt

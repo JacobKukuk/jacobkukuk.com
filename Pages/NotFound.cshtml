@@ -1,0 +1,39 @@
+@page
+@model ErrorModel
+@{
+    ViewData["Title"] = "404 - Page Not Found";
+    ViewData["Description"] = "The page you are looking for could not be found on jacobkukuk.com";
+}
+
+@section Head {
+    <meta name="robots" content="noindex, nofollow">
+}
+
+<section class="min-h-[70vh] flex flex-col items-center justify-center text-center" aria-labelledby="error-title">
+    <div class="bg-black/80 p-8 md:p-12 border-4 border-retro-neon shadow-[8px_8px_0px_#ff0099] max-w-2xl">
+        <div class="mb-8">
+            <h1 id="error-title" class="font-retro text-6xl md:text-8xl text-retro-neon mb-4 text-glow-pink">404</h1>
+            <p class="font-retro text-xl md:text-2xl text-retro-cyan mb-2">PAGE NOT FOUND</p>
+        </div>
+        
+        <div class="font-terminal text-2xl text-white mb-8 space-y-2">
+            <p class="text-retro-yellow">// ERROR: FILE_NOT_FOUND</p>
+            <p>The page you're looking for doesn't exist in this dimension.</p>
+            <p class="text-retro-green">Maybe it was deleted, moved, or never existed at all...</p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row justify-center gap-4 font-retro text-sm">
+            <a href="/" class="bg-retro-cyan text-black px-6 py-4 border-b-4 border-r-4 border-retro-bg hover:translate-x-[2px] hover:translate-y-[2px] hover:border-0 hover:bg-white transition-all">
+                <i class="fa-solid fa-home mr-2" aria-hidden="true"></i>Return Home
+            </a>
+            <a href="/#projects" class="bg-transparent text-retro-neon border-4 border-retro-neon px-6 py-4 hover:bg-retro-neon hover:text-black transition-colors">
+                <i class="fa-solid fa-rocket mr-2" aria-hidden="true"></i>View Projects
+            </a>
+        </div>
+    </div>
+
+    <div class="mt-12 font-terminal text-xl text-gray-500" aria-hidden="true">
+        <p>&gt; Try using the navigation above</p>
+        <p>&gt; Or <a href="/#contact" class="text-retro-cyan hover:underline">contact me</a> if you think this is a mistake</p>
+    </div>
+</section>
